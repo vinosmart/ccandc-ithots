@@ -7,6 +7,9 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import Marquee from "../../components/marquee";
 import StatsCounter from "../../components/StatsCounter";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const testimonials = [
   {
     name: "Jerome Bell",
@@ -113,9 +116,16 @@ const cardData2 = [
   },
 ];
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="bg-[url(/bg.png)] bg-cover bg-center h-screen font-sans">
-      <div className="flex justify-center items-center fixed top-10 w-full z-[999999]">
+      <div
+        data-aos="fade-down"
+        className="flex justify-center items-center fixed top-10 w-full z-[999999]"
+      >
         <div className="w-[1128px] h-[88px] relative bg-white  rounded-[100px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
           <div className="h-6 left-[258px] top-[32px] absolute inline-flex justify-start items-center gap-8">
             <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
@@ -149,7 +159,10 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20">
+      <section
+        data-aos="fade-up"
+        className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20"
+      >
         <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
           Powering Digital Transformation <br />
           <span className="text-gray-900">
@@ -173,7 +186,10 @@ export default function Home() {
           TALK TO US
         </button>
       </section>
-      <section className="flex justify-center items-center mt-[290px]">
+      <section
+        data-aos="fade-up"
+        className="flex justify-center items-center mt-[290px]"
+      >
         <div className="flex items-center gap-40">
           <div>
             <Image
@@ -308,7 +324,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="flex justify-center items-center  mt-[120px]">
+      <section
+        data-aos="fade-up"
+        className="flex justify-center items-center  mt-[120px]"
+      >
         <div className="flex items-center gap-40">
           <div>
             <Image
@@ -499,84 +518,84 @@ export default function Home() {
               <Image
                 src="/logo/1.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/2.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/3.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px] "
+                className=" object-contain w-[100px] md:w-[150px] "
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/4.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/5.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/6.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px] "
+                className=" object-contain w-[100px] md:w-[150px] "
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/7.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/8.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/9.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />{" "}
               <Image
                 src="/logo/10.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />{" "}
               <Image
                 src="/logo/11.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/12.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
@@ -585,84 +604,84 @@ export default function Home() {
               <Image
                 src="/logo/1.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/2.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/3.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px] "
+                className=" object-contain w-[100px] md:w-[150px] "
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/4.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/5.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/6.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px] "
+                className=" object-contain w-[100px] md:w-[150px] "
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/7.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/8.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/9.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />{" "}
               <Image
                 src="/logo/10.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />{" "}
               <Image
                 src="/logo/11.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
               <Image
                 src="/logo/12.png"
                 alt="Company logo"
-                className=" object-contain shadow w-[100px] md:w-[150px]"
+                className=" object-contain w-[100px] md:w-[150px]"
                 width={150}
                 height={150}
               />
@@ -677,7 +696,7 @@ export default function Home() {
               Our Numbers Speak
             </h1>
           </div>
-          <main>
+          <main data-aos="fade-up">
             <StatsCounter />
           </main>
         </div>
@@ -706,7 +725,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="md:w-[1128px] py-20">
+        <div data-aos="fade-zoom" className="md:w-[1128px] py-20">
           <div className="relative">
             <Image
               src="/last.png"
