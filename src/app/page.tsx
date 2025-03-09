@@ -356,27 +356,35 @@ export default function Home() {
       >
         <div className="flex items-center gap-20">
           <div>
-            <Image
-              src="/lap.png"
-              className="rounded-3xl"
-              alt="Company Logo"
-              width={524}
-              height={572}
-            />
+            <iframe
+              width="560"
+              height="615"
+              src="https://www.youtube.com/embed/yHucWNu6CXM?si=DgxPTPgp83VW3144"
+              className="rounded-3xl -mt-16"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div className="w-[672px] flex flex-col items-center">
             <h1 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
-              Helping Organisations Excel in Architecture for Over 20 Years
+              Transform Banking with CC&C Solutions!
             </h1>
             <p className="text-[20px] text-gray-600 mt-6 text-justify tracking-tight">
-              As the pace of innovation, customer expectations and competition
-              continue to increase, the difference between leading and lagging
-              lies in the mastery of business and enterprise architecture. CC&C
-              Solutions stands at the forefront of this divide, offering over
-              two decades of specialized experience in the Financial Services,
-              Insurance, Telecommunications, Retail, and Health industries. Our
-              commitment is not just to consult but to transform your
-              operational capabilities through disciplined best practices
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, qui provident adipisci magnam iste tempore cupiditate
+              quas sequi. Accusamus non est eaque, dolores quia doloribus illum
+              reiciendis eligendi natus esse! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Repellendus, qui provident adipisci
+              magnam iste tempore cupiditate quas sequi. Accusamus non est
+              eaque, dolores quia doloribus illum reiciendis eligendi natus
+              esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, qui provident adipisci magnam iste tempore cupiditate
+              quas sequi. Accusamus non est eaque, dolores quia doloribus illum
+              reiciendis eligendi natus esse! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Repellendus, qui provident adipisci
+              magnam
             </p>
             <div className="relative w-[350px]">
               <div className=" border-2 p-2 relative border-[#ffc40e] inline-flex justify-center items-center mt-40 overflow-hidden">
@@ -799,6 +807,17 @@ export default function Home() {
                 training organization, and a leader in Enterprise Architecture,
                 Digital Transformation, and IT Transformation.
               </p>
+              {/* Subscription Form */}
+              <div className="flex  gap-2 mt-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="p-2 w-[230px] rounded-md bg-white text-black placeholder-[#AAAAAA] focus:outline-none"
+                />
+                <button className="p-2 bg-[#195586]/60 text-white rounded-md hover:bg-[#2373A5]">
+                  Subscribe
+                </button>
+              </div>
             </div>
             <div className="flex flex-col gap-4 mt-6 text-[#AAAAAA] text-[18px]">
               <a href="#">Home</a>
@@ -836,7 +855,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <hr className=" lg:w-[1066px] border border-[#195586]" />
+            <hr className=" lg:w-[1066px] border border-[#195586]/60" />
           </div>
           <div className="flex justify-center items-center">
             <div className="flex justify-between items-center  lg:w-[1066px]   py-10">
