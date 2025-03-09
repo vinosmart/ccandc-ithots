@@ -10,6 +10,7 @@ import StatsCounter from "../../components/StatsCounter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Typewriter } from "react-simple-typewriter";
 const testimonials = [
   {
     name: "Jerome Bell",
@@ -131,7 +132,7 @@ const cardData3 = [
   {
     title: "IT4IT",
     description:
-      "The rapidly growing gap between customer expectations and legacy capabilities has made our disciplined application of architecture across business, application and data crucial to success",
+      "With more than half of all IT4IT practitioners trained and certified by CC&C, we equip your teams to manage DevOps and Digital Products at scale with our gold standard IT4IT foundation course.",
     icon: "/integration.svg",
   },
 ];
@@ -184,9 +185,15 @@ export default function Home() {
         className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20"
       >
         <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
-          Powering Digital Transformation <br />
-          <span className="text-gray-900">
-            Through World-Class Architecture
+          Powering Digital Transformation <br /> Through
+          <span className="text-[#F68827]">
+            <Typewriter
+              words={[" World-Class Architecture"]}
+              loop={false}
+              cursor
+              typeSpeed={80}
+              deleteSpeed={50}
+            />
           </span>
         </h1>
         <h4 className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
@@ -252,14 +259,12 @@ export default function Home() {
         <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px]">
           Accelerating Your Banking Transformation
         </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[50px]">
-          CC&C Solutions has been providing industry-leading architecture
-          consulting, training, and digital transformation delivery services for
-          some of the most successful global organisations for over 20 years.
-          Bringing together the most talented leaders and experts in the fields
-          of Financial Services, Insurance, Telecommunications, Retail and
-          Health we have an unparalleled record for delighting and making our
-          customers successful
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
+          The Financial Servicesindustry is going througha radical
+          modernization, simplification, and interoperability renaissance across
+          the globe. But unlocking the potential for digital transformation
+          within your enterprise requires the right architecture experience,
+          disciplines, and capabilities
         </p>
         <div className="flex justify-center gap-6 mt-10">
           {cardData.map((card, index) => (
@@ -278,13 +283,13 @@ export default function Home() {
               </h3>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-loose text-[#e0e0e0] group-hover:text-black transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-[35px] text-[#e0e0e0] group-hover:text-black transition-all duration-300">
                 {card.description}
               </div>
 
               {/* Learn More Button */}
               <button
-                className="absolute bottom-0 right-0 px-5 py-2 bg-[#0d9eff] text-white rounded-br-3xl rounded-tl-3xl text-sm font-semibold flex items-center gap-2 transition-all duration-300
+                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px]  px-5 py-2 bg-[#0d9eff] text-white  text-sm font-semibold flex items-center gap-2 transition-all duration-300
               opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
               >
                 LEARN MORE
@@ -296,43 +301,44 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="bg-[#F5F5F5] flex flex-col justify-center items-center pt-[160px] pb-[120px]">
-        <h1 className="mt-10 text-black font-extrabold text-[56px] leading-[70px]">
-          Accelerating Your Banking Transformation
+      <section className="bg-[#F5F5F5] flex flex-col justify-center items-center pt-[100px] pb-[120px]">
+        <h1 className="mt-10 text-black/80 font-extrabold text-[56px] text-center leading-[70px]">
+          Helping Organisations Excel in <br /> Architecture for Over 20 Years
         </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-black  leading-[50px]">
-          CC&C Solutions has been providing industry-leading architecture
-          consulting, training, and digital transformation delivery services for
-          some of the most successful global organisations for over 20 years.
-          Bringing together the most talented leaders and experts in the fields
-          of Financial Services, Insurance, Telecommunications, Retail and
-          Health we have an unparalleled record for delighting and making our
-          customers successful
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-black/80  leading-[35px]">
+          As the pace of innovation, customer expectations and competition
+          continue to increase, the difference between leading and lagging lies
+          in the mastery of business and enterprisearchitecture. CC&C Solutions
+          stands at the forefront of this divide, offering over two decades of
+          specialized experience in the Financial Services, Insurance,
+          Telecommunications, Retail, and Health industries. Our commitment is
+          not just to consult but to transform your operational capabilities
+          through disciplined best practices.
         </p>
         <div className="flex justify-center gap-6 mt-10">
           {cardData2.map((card, index) => (
             <div
               key={index}
-              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-[#0c71c3]"
+              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-[#FF8800]"
             >
               {/* Icon */}
-              <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#0c71c3] group-hover:bg-[#0D9EFF] rounded-xl inline-flex justify-center items-center">
+              <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#FF8800] group-hover:bg-[#e9a251] rounded-xl inline-flex justify-center items-center">
                 <Image src={card.icon} alt="Icon" width={40} height={40} />
               </div>
 
               {/* Title */}
-              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black group-hover:text-[#e0e0e0] transition-all duration-300">
+              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black/80 group-hover:text-[#e0e0e0] transition-all duration-300">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black group-hover:text-[#e0e0e0] transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black/80 group-hover:text-[#e0e0e0] transition-all duration-300">
                 {card.description}
               </div>
 
               {/* Learn More Button */}
               <button
-                className="absolute bottom-0 right-0 px-5 py-2 bg-[#0d9eff] text-white rounded-br-3xl rounded-tl-3xl text-sm font-semibold flex items-center gap-2 transition-all duration-300
+                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px] px-5 py-2 bg-white text-black  text-sm font-semibold flex items-center gap-2 transition-all duration-300
               opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
               >
                 LEARN MORE
@@ -395,14 +401,13 @@ export default function Home() {
         <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px] text-center">
           Industry-Leading Architecture Training <br /> and Certification
         </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[50px]">
-          CC&C Solutions has been providing industry-leading architecture
-          consulting, training, and digital transformation delivery services for
-          some of the most successful global organisations for over 20 years.
-          Bringing together the most talented leaders and experts in the fields
-          of Financial Services, Insurance, Telecommunications, Retail and
-          Health we have an unparalleled record for delighting and making our
-          customers successful
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
+          Getting Architecture right provides one of the highest returns on
+          investment for your business. And equipping your teams with the right
+          skills and qualifications is our business. We have been training and
+          certifying hundreds of organisations and hundreds of thousands of
+          individuals world-wide for over 20 yearsin industry-leading
+          frameworks, standards andtools.
         </p>
         <div className="flex justify-center gap-6 mt-10">
           {cardData3.map((card, index) => (
@@ -421,13 +426,13 @@ export default function Home() {
               </div>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[184px] absolute text-xl leading-9 text-[#e0e0e0] group-hover:text-black transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[184px] absolute text-xl leading-8 text-[#e0e0e0] group-hover:text-black transition-all duration-300">
                 {card.description}
               </div>
 
               {/* Learn More Button */}
               <button
-                className="absolute bottom-0 right-0 px-5 py-2 bg-[#0d9eff] text-white rounded-br-3xl rounded-tl-3xl text-sm font-semibold flex items-center gap-2 transition-all duration-300
+                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px]  px-5 py-2 bg-[#0d9eff] text-white  text-sm font-semibold flex items-center gap-2 transition-all duration-300
               opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
               >
                 LEARN MORE
@@ -725,18 +730,18 @@ export default function Home() {
         <div className="md:w-[1128px] mt-40">
           <div className="flex flex-col gap-5">
             <p className="font-bold text-[56px]">Our Team: Our People</p>
-            <p className="text-[20px] leading-[36px] text-[#393939]">
+            <p className="text-[20px] leading-[35px] text-[#393939]">
               CC&C harnesses the collective power of global expertise in
               architecture, data, digital transformation, and modern delivery
               paradigms to redefine the landscape of IT consulting. Our team,
               composed of consultant experts from around the world, brings deep,
               cross-domain experience to the forefront of every engagement
             </p>
-            <p className="text-[20px] leading-[36px] text-[#393939]">
+            <p className="text-[20px] leading-[35px] text-[#393939]">
               Our team have a 20+ year track record of delivering tailored,
               impactful solutions that drive real, measurable outcomes.
             </p>
-            <p className="text-[20px] leading-[36px] text-[#393939]">
+            <p className="text-[20px] leading-[35px] text-[#393939]">
               Whether its through strategic consultancy, the implementation of
               advanced IT strategies, or guiding digital transformation efforts,
               our focus remains unwavering: to empower our clients with the
@@ -745,7 +750,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div data-aos="fade-zoom" className="md:w-[1128px] py-20">
+        <div data-aos="fade-zoom" className="md:w-[1128px] pt-20 pb-40">
           <div className="relative">
             <Image
               src="/last.png"
@@ -778,7 +783,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#0D2F4B]">
+      <footer className="bg-[#0D2F4B]">
         <div>
           <div className="flex justify-center items-center p-20 gap-20 py-[50px]">
             <div className="flex flex-col gap-4">
@@ -789,13 +794,10 @@ export default function Home() {
                 height={90}
                 className="w-[90px] h-[90px]"
               />
-              <p className="w-[500px] text-[#AAAAAA] text-[18px]">
+              <p className="w-[500px] text-[#AAAAAA] tracking-tighter text-justify text-[18px]">
                 CC&C is a global Strategy and Architecture consulting and
                 training organization, and a leader in Enterprise Architecture,
-                Digital Transformation, and IT Transformation. We passionately
-                believe in enhancing customers’ competence and self-sufficiency
-                in the unique space that links business strategy with IT value
-                delivery.
+                Digital Transformation, and IT Transformation.
               </p>
             </div>
             <div className="flex flex-col gap-4 mt-6 text-[#AAAAAA] text-[18px]">
@@ -809,7 +811,7 @@ export default function Home() {
               <a href="#">Enquire now</a>
               <a href="#">Contact us</a>
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2 mt-16">
               <Image
                 src="/insta.svg"
                 alt="instragram"
@@ -833,18 +835,24 @@ export default function Home() {
               />
             </div>
           </div>
-          <hr className="mx-[420px] border border-[#195586]" />
-          <div className="flex justify-center items-center gap-[450px] py-10">
-            <p className="text-[#AAAAAA] text-[18px]">
-              Copyright@2025 All rights reserved
-            </p>
-            <div className="flex gap-10">
-              <p className="text-[#AAAAAA] text-[18px]">Privacy policy</p>
-              <p className="text-[#AAAAAA] text-[18px]">Terms and conditions</p>
+          <div className="flex justify-center items-center">
+            <hr className=" lg:w-[1066px] border border-[#195586]" />
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="flex justify-between items-center  lg:w-[1066px]   py-10">
+              <p className="text-[#AAAAAA] text-[18px]">
+                Copyright@2025 All rights reserved
+              </p>
+              <div className="flex gap-10">
+                <p className="text-[#AAAAAA] text-[18px]">Privacy policy</p>
+                <p className="text-[#AAAAAA] text-[18px]">
+                  Terms and conditions
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </footer>
     </div>
   );
 }
