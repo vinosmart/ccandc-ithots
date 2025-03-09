@@ -355,16 +355,16 @@ export default function Home() {
         className="flex justify-center items-center  mt-[120px]"
       >
         <div className="flex items-center gap-20">
-          <div>
+          <div className="">
             <iframe
               width="560"
               height="615"
               src="https://www.youtube.com/embed/yHucWNu6CXM?si=DgxPTPgp83VW3144"
-              className="rounded-3xl -mt-16"
+              className="rounded-3xl -mt-16 "
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
           </div>
           <div className="w-[672px] flex flex-col items-center">
@@ -814,7 +814,7 @@ export default function Home() {
                   placeholder="Enter your email"
                   className="p-2 w-[230px] rounded-md bg-white text-black placeholder-[#AAAAAA] focus:outline-none"
                 />
-                <button className="p-2 bg-[#195586]/60 text-white rounded-md hover:bg-[#2373A5]">
+                <button className="p-2 bg-[#195586]/60     text-white rounded-md hover:bg-[#2373A5]">
                   Subscribe
                 </button>
               </div>
