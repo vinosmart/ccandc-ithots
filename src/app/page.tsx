@@ -260,7 +260,7 @@ export default function Home() {
           Accelerating Your Banking Transformation
         </h1>
         <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
-          The Financial Servicesindustry is going througha radical
+          The Financial Services industry is going througha radical
           modernization, simplification, and interoperability renaissance across
           the globe. But unlocking the potential for digital transformation
           within your enterprise requires the right architecture experience,
