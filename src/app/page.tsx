@@ -97,19 +97,39 @@ const cardData = [
 ];
 const cardData2 = [
   {
-    title: "Banking Architecture",
+    title: "Business Architecture",
     description:
-      "We work in close partnership with leading industry bodies to develop the deep expertise and tools that can radically simplify and modernize your banking landscape.",
+      "Maximising the return on your investment starts with a solid business architecture blueprint. Our certified Business Architects have helped bootstrap and operationalize world-class Business Architecture capabilities for leading organisations around the globe",
     icon: "/build.svg",
   },
   {
-    title: "BIAN Implementation",
+    title: "Enterprise Architecture",
     description:
-      "Our team have the expertise to take BIAN from a reference architecture to detailed design and development, unlocking it’s potential and delivering tangible benefits to your organization",
+      "As contributors and experts in industry architecture frameworks including TOGAF, IT4IT, BIAN and more we can help you establish and operate an effective enterprise architecture practice from strategy to tooling, frameworks, methodology, process, and governance",
     icon: "/cloud.svg",
   },
   {
-    title: "Digital Transformation",
+    title: "Skills Transformation",
+    description:
+      "The single biggest differentiator you have is your people and their skills. We are a leading global training and certification provider in BIAN, TOGAF, IT4IT, ArchiMate, Bizz Design, and more, helping organisations boost their people capability to the forefront of their industry",
+    icon: "/integration.svg",
+  },
+];
+const cardData3 = [
+  {
+    title: "BIAN",
+    description:
+      "As an active BIAN member and the only BIAN-accredited training organisation with a global footprint, CC&C is uniquely positioned to help teams deliver early, measurable value while learning how to maximise BIAN usage effectively for the long term",
+    icon: "/build.svg",
+  },
+  {
+    title: "TOGAF",
+    description:
+      "Provide your teams the most up-to-date TOGAF certification, reflecting the many enhancements including agile architecture, digital transformation, capability-based planning, integrated risk and security, and much more",
+    icon: "/cloud.svg",
+  },
+  {
+    title: "IT4IT",
     description:
       "The rapidly growing gap between customer expectations and legacy capabilities has made our disciplined application of architecture across business, application and data crucial to success",
     icon: "/integration.svg",
@@ -169,10 +189,10 @@ export default function Home() {
             Through World-Class Architecture
           </span>
         </h1>
-        <p className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
+        <h4 className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
           Architecture by Design Consultancy Skills Transformation CC&C
           Solutions has been providing industry-leading architecture consulting.
-        </p>
+        </h4>
         <button className="mt-[48px] flex items-center gap-2 bg-[#0C71C3] text-white  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
           <span>
             <Image
@@ -201,9 +221,9 @@ export default function Home() {
             />
           </div>
           <div className="w-[572px]">
-            <h1 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
+            <h2 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
               Architecture consulting & skills
-            </h1>
+            </h2>
             <p className="text-[20px] text-gray-600 mt-6 text-justify tracking-tight">
               CC&C Solutions has been providing industry-leading architecture
               consulting, training, and digital transformation delivery services
@@ -232,7 +252,7 @@ export default function Home() {
         <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px]">
           Accelerating Your Banking Transformation
         </h1>
-        <p className="text-[20px] mt-6 max-w-[1440px] text-center text-[#EEEEEE]  leading-[50px]">
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[50px]">
           CC&C Solutions has been providing industry-leading architecture
           consulting, training, and digital transformation delivery services for
           some of the most successful global organisations for over 20 years.
@@ -253,9 +273,9 @@ export default function Home() {
               </div>
 
               {/* Title */}
-              <div className="w-[203px] left-[24px] top-[128px] absolute text-[32px] font-extrabold leading-10 text-[#eeeeee] group-hover:text-black transition-all duration-300">
+              <h3 className="w-[203px] left-[24px] top-[128px] absolute text-[32px] font-extrabold leading-10 text-[#eeeeee] group-hover:text-black transition-all duration-300">
                 {card.title}
-              </div>
+              </h3>
 
               {/* Description */}
               <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-loose text-[#e0e0e0] group-hover:text-black transition-all duration-300">
@@ -280,7 +300,7 @@ export default function Home() {
         <h1 className="mt-10 text-black font-extrabold text-[56px] leading-[70px]">
           Accelerating Your Banking Transformation
         </h1>
-        <p className="text-[20px] mt-6 max-w-[1440px] text-center text-black  leading-[50px]">
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-black  leading-[50px]">
           CC&C Solutions has been providing industry-leading architecture
           consulting, training, and digital transformation delivery services for
           some of the most successful global organisations for over 20 years.
@@ -293,7 +313,7 @@ export default function Home() {
           {cardData2.map((card, index) => (
             <div
               key={index}
-              className="group w-[360px] h-[559px] relative bg-white rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-[#0c71c3]"
+              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-[#0c71c3]"
             >
               {/* Icon */}
               <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#0c71c3] group-hover:bg-[#0D9EFF] rounded-xl inline-flex justify-center items-center">
@@ -301,12 +321,12 @@ export default function Home() {
               </div>
 
               {/* Title */}
-              <div className="w-[203px] left-[24px] top-[128px] absolute text-[32px] font-extrabold leading-10 text-black group-hover:text-[#e0e0e0] transition-all duration-300">
+              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black group-hover:text-[#e0e0e0] transition-all duration-300">
                 {card.title}
-              </div>
+              </h3>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-loose text-black group-hover:text-[#e0e0e0] transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black group-hover:text-[#e0e0e0] transition-all duration-300">
                 {card.description}
               </div>
 
@@ -328,7 +348,7 @@ export default function Home() {
         data-aos="fade-up"
         className="flex justify-center items-center  mt-[120px]"
       >
-        <div className="flex items-center gap-40">
+        <div className="flex items-center gap-20">
           <div>
             <Image
               src="/lap.png"
@@ -372,10 +392,10 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#0C71C3] flex flex-col justify-center items-center mt-[160px] pb-[120px]">
-        <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px]">
-          Accelerating Your Banking Transformation
+        <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px] text-center">
+          Industry-Leading Architecture Training <br /> and Certification
         </h1>
-        <p className="text-[20px] mt-6 max-w-[1440px] text-center text-[#EEEEEE]  leading-[50px]">
+        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[50px]">
           CC&C Solutions has been providing industry-leading architecture
           consulting, training, and digital transformation delivery services for
           some of the most successful global organisations for over 20 years.
@@ -385,7 +405,7 @@ export default function Home() {
           customers successful
         </p>
         <div className="flex justify-center gap-6 mt-10">
-          {cardData.map((card, index) => (
+          {cardData3.map((card, index) => (
             <div
               key={index}
               className="group w-[360px] h-[559px] relative bg-[#0c71c3] rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-white"
@@ -401,7 +421,7 @@ export default function Home() {
               </div>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-loose text-[#e0e0e0] group-hover:text-black transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[184px] absolute text-xl leading-9 text-[#e0e0e0] group-hover:text-black transition-all duration-300">
                 {card.description}
               </div>
 
