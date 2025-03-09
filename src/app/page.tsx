@@ -319,7 +319,7 @@ export default function Home() {
           {cardData2.map((card, index) => (
             <div
               key={index}
-              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-[#FF8800]"
+              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-white overflow-hidden transition-all duration-300 hover:bg-[#FF8800]"
             >
               {/* Icon */}
               <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#FF8800] group-hover:bg-[#e9a251] rounded-xl inline-flex justify-center items-center">
@@ -327,12 +327,12 @@ export default function Home() {
               </div>
 
               {/* Title */}
-              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black/80 group-hover:text-[#e0e0e0] transition-all duration-300">
+              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black/80 group-hover:text-white transition-all duration-300">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black/80 group-hover:text-[#e0e0e0] transition-all duration-300">
+              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black/80 group-hover:text-white transition-all duration-300">
                 {card.description}
               </div>
 
