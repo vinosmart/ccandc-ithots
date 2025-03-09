@@ -790,9 +790,9 @@ export default function Home() {
               <Image
                 src="/logo.png"
                 alt="img"
-                width={90}
-                height={90}
-                className="w-[90px] h-[90px]"
+                width={130}
+                height={130}
+                className="w-[130px] object-contain h-[130px]"
               />
               <p className="w-[500px] text-[#AAAAAA] tracking-tighter text-justify text-[18px]">
                 CC&C is a global Strategy and Architecture consulting and
