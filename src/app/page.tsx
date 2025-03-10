@@ -788,7 +788,7 @@ export default function Home() {
       </section>
       <footer className="bg-[#0D2F4B]">
         <div>
-          <div className="flex justify-center items-center p-20 gap-20 py-[50px]">
+          <div className="flex justify-center items-center gap-20 pt-[50px] pb-8">
             <div className="flex flex-col gap-4">
               <Image
                 src="/logo.png"
@@ -854,12 +854,12 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center">
             <div className="flex justify-between items-center  lg:w-[1066px]   py-10">
-              <p className="text-[#AAAAAA] text-[18px]">
+              <p className="text-[#AAAAAA] text-[16px]">
                 Copyright@2025 All rights reserved
               </p>
               <div className="flex gap-10">
-                <p className="text-[#AAAAAA] text-[18px]">Privacy policy</p>
-                <p className="text-[#AAAAAA] text-[18px]">
+                <p className="text-[#AAAAAA] text-[16px]">Privacy policy</p>
+                <p className="text-[#AAAAAA] text-[16px]">
                   Terms and conditions
                 </p>
               </div>
