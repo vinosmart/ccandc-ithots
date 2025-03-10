@@ -217,7 +217,7 @@ export default function Home() {
         data-aos="fade-up"
         className="flex justify-center items-center mt-[290px]"
       >
-        <div className="flex items-center gap-40">
+        <div className="flex items-center gap-20">
           <div>
             <Image
               src="/team.png"
@@ -231,7 +231,7 @@ export default function Home() {
             <h2 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
               Architecture consulting & skills
             </h2>
-            <p className="text-[20px] text-gray-600 mt-6 text-justify tracking-tight">
+            <p className="text-[20px] text-gray-600 mt-6 text-start tracking-tight">
               CC&C Solutions has been providing industry-leading architecture
               consulting, training, and digital transformation delivery services
               for some of the most successful global organisations for over 20
@@ -380,11 +380,6 @@ export default function Home() {
               magnam iste tempore cupiditate quas sequi. Accusamus non est
               eaque, dolores quia doloribus illum reiciendis eligendi natus
               esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, qui provident adipisci magnam iste tempore cupiditate
-              quas sequi. Accusamus non est eaque, dolores quia doloribus illum
-              reiciendis eligendi natus esse! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Repellendus, qui provident adipisci
-              magnam
             </p>
             <div className="relative w-[350px]">
               <div className=" border-2 p-2 relative border-[#ffc40e] inline-flex justify-center items-center mt-40 overflow-hidden">
@@ -405,8 +400,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#0C71C3] flex flex-col justify-center items-center mt-[160px] pb-[120px]">
-        <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px] text-center">
+      <section className="bg-[#0C71C3] flex flex-col justify-center items-center py-[160px] mt-[120px]">
+        <h1 className=" text-white font-extrabold text-[56px] leading-[70px] text-center">
           Industry-Leading Architecture Training <br /> and Certification
         </h1>
         <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
@@ -723,9 +718,9 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-[202px]">
-        <div className="bg-[url(/num.png)] bg-contain bg-center h-[900px]">
+        <div className="bg-[url(/num.png)] bg-contain py-80  bg-center">
           <div>
-            <h1 className=" text-white text-center pt-40 font-extrabold text-[56px]">
+            <h1 className=" text-white text-center font-extrabold text-[56px]">
               Our Numbers Speak
             </h1>
           </div>
@@ -759,35 +754,35 @@ export default function Home() {
           </div>
         </div>
         <div data-aos="fade-zoom" className="md:w-[1128px] pt-20 pb-40">
-          <div className="relative">
+          <div className=" relative flex justify-start items-center">
             <Image
               src="/last.png"
               alt="background"
-              className="w-[700px]"
+              className="w-[700px] relative"
               layout="responsive"
               width={700}
               height={60}
             />
-          </div>
-          <div className="absolute -mt-[200px] px-[50px]">
-            <p className="text-[24px] text-white">
-              Helping Organisations Excel in Architecture over 20 years
-            </p>
-            <p className="text-[36px] text-white font-bold">
-              Learn more about our services
-            </p>
-            <button className="mt-[24px] flex items-center gap-2 bg-white text-[#0C71C3]  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
-              <span>
-                <Image
-                  className="ml-4 "
-                  src="/arrow2.svg"
-                  alt="Company Logo"
-                  width={40}
-                  height={40}
-                />
-              </span>{" "}
-              TALK TO US
-            </button>
+            <div className="absolute top-[58px]  px-[50px]">
+              <p className="text-[24px] text-white">
+                Helping Organisations Excel in Architecture over 20 years
+              </p>
+              <p className="text-[36px] text-white font-bold">
+                Learn more about our services
+              </p>
+              <button className="mt-[24px] flex items-center gap-2 bg-white text-[#0C71C3]  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
+                <span>
+                  <Image
+                    className="ml-4 "
+                    src="/arrow2.svg"
+                    alt="Company Logo"
+                    width={40}
+                    height={40}
+                  />
+                </span>{" "}
+                TALK TO US
+              </button>
+            </div>
           </div>
         </div>
       </section>
