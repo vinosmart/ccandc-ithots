@@ -5,12 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
-import Marquee from "../../components/marquee";
+// import Marquee from "../../components/marquee";
 import StatsCounter from "../../components/StatsCounter";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { Typewriter } from "react-simple-typewriter";
+import { useEffect, useState } from "react";
+// import { Typewriter } from "react-simple-typewriter";
 const testimonials = [
   {
     name: "Jerome Bell",
@@ -140,33 +140,57 @@ export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos > prevScrollPos) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
   return (
     <div className="bg-[url(/bg.png)] bg-cover bg-center h-screen font-sans">
       <div
-        data-aos="fade-down"
-        className="flex justify-center items-center fixed top-10 w-full z-[999999]"
+        className={`flex justify-center items-center fixed top-10 w-full z-[999999] transition-transform duration-300 ${
+          isVisible ? " block" : "hidden"
+        }`}
       >
-        <div className="w-[1128px] h-[88px] relative bg-white  rounded-[100px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
+        <div className="w-[1128px] h-[88px] relative bg-white rounded-[100px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
           <div className="h-6 left-[258px] top-[32px] absolute inline-flex justify-start items-center gap-8">
-            <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
+            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Why us
             </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
+            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Banking & BIAN
             </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
+            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Architecture & tools
             </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
+            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Training
             </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal  leading-normal">
+            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Contact us
             </div>
           </div>
           <div className="h-11 px-5 py-3 left-[943px] top-[22px] absolute bg-[#0c71c3] rounded-[100px] inline-flex justify-center items-center gap-2.5">
-            <div className="relative justify-start text-white text-base font-semibold  leading-tight">
+            <div className="relative justify-start text-white text-base font-semibold leading-tight">
               GET IN TOUCH
             </div>
           </div>
@@ -185,16 +209,17 @@ export default function Home() {
         className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20"
       >
         <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
-          Powering Digital Transformation <br /> Through
-          <span className="text-[#F68827]">
+          Powering Digital Transformation <br /> Through World-Class
+          Architecture
+          {/* <span className="text-[#F68827]">
             <Typewriter
-              words={[" World-Class Architecture"]}
+              words={[" "]}
               loop={false}
               cursor
               typeSpeed={80}
               deleteSpeed={50}
             />
-          </span>
+          </span> */}
         </h1>
         <h4 className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
           Architecture by Design Consultancy Skills Transformation CC&C
@@ -541,179 +566,91 @@ export default function Home() {
               outcomes for each client.
             </p>
           </div>
-          <div className="storybook-fix relative flex w-full max-w-[1100px] gap-4 md:gap-10 mt-20 items-center justify-center overflow-hidden rounded-md  bg-background flex-col">
-            <Marquee>
-              <Image
-                src="/logo/1.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/2.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/3.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px] "
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/4.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/5.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/6.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px] "
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/7.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/8.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/9.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />{" "}
-              <Image
-                src="/logo/10.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />{" "}
-              <Image
-                src="/logo/11.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/12.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-            </Marquee>
-            <Marquee reverse>
-              <Image
-                src="/logo/1.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/2.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/3.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px] "
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/4.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/5.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/6.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px] "
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/7.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/8.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/9.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />{" "}
-              <Image
-                src="/logo/10.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />{" "}
-              <Image
-                src="/logo/11.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-              <Image
-                src="/logo/12.png"
-                alt="Company logo"
-                className=" object-contain w-[100px] md:w-[150px]"
-                width={150}
-                height={150}
-              />
-            </Marquee>
+          <div className="storybook-fix relative flex w-full max-w-[1100px] gap-4 md:gap-10 mt-20 items-center justify-center overflow-hidden rounded-md  bg-background flex-wrap">
+            <Image
+              src="/logo/1.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/2.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/3.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px] "
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/4.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/5.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/6.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px] "
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/7.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/8.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/9.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/logo/10.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/logo/11.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/logo/12.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
           </div>
         </div>
       </section>
