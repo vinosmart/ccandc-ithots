@@ -110,100 +110,109 @@ export default function Bian() {
     {
       id: 1,
       title: "Step 1: Capture current state",
-      description:
-        "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reprehenderit sit asperiores corporis pariatur neque totam repellendus, distinctio dolorem laboriosam soluta? Necessitatibus dolor architecto recusandae modi praesentium quae saepe facilis.",
+      description: "  Fragmented enterprise landscape",
+      description1: "  Duplicated capabilities",
+      description2: " Point-to-point API’s with no reuse",
+      description3: "Control gaps and regulatory risk",
+      description4: "  Slow time to market",
+      description5: "  High operational expense",
 
-      image: "/bian/training1.png", // Add your image path
+      image: "/cc/1.png", // Add your image path
       link: "/foundation-training",
     },
     {
       id: 1,
       title: "Step 2: Map and classify",
-      description:
-        "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reprehenderit sit asperiores corporis pariatur neque totam repellendus, distinctio dolorem laboriosam soluta? Necessitatibus dolor architecto recusandae modi praesentium quae saepe facilis.",
-
-      image: "/bian/training1.png", // Add your image path
+      description: "  Define BIAN-based Service Landscape and map applications",
+      description1: " Classify API’s and identify degree of BIAN alignment",
+      description2: " Identify duplication of capabilities",
+      description3: "Improve change impact analysis",
+      image: "/cc/2.png", // Add your image path
       link: "/foundation-training",
     },
     {
       id: 1,
       title: "Step 3: Align and wrap",
-      description:
-        "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reprehenderit sit asperiores corporis pariatur neque totam repellendus, distinctio dolorem laboriosam soluta? Necessitatibus dolor architecto recusandae modi praesentium quae saepe facilis.",
-
-      image: "/bian/training1.png", // Add your image path
+      description: " Group capabilities and align to business domains",
+      description1:
+        "  Leverage BIAN API’s to expose standard interfaces and abstract complexity",
+      description2: "Identify applications to invest vs retire",
+      description3: "Guide transformation planning",
+      image: "/cc/3.png", // Add your image path
       link: "/foundation-training",
     },
     {
       id: 1,
       title: "Step 4: Rationalize and reuse",
-      description:
-        "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reprehenderit sit asperiores corporis pariatur neque totam repellendus, distinctio dolorem laboriosam soluta? Necessitatibus dolor architecto recusandae modi praesentium quae saepe facilis.",
-
-      image: "/bian/training1.png", // Add your image path
+      description: " Rationalize capabilities to BIAN Service Domains",
+      description1: "  Reusable BIAN-aligned API’s",
+      description2:
+        "Alignment to other banks and vendors who have adopted BIAN",
+      description3: "Reduced cost of change and operational expense",
+      image: "/cc/4.png", // Add your image path
       link: "/foundation-training",
     },
   ];
   const CardData = [
     {
       id: 1,
-      image: "/bian/training1.png", // Replace with actual image paths
+      image: "/service-offerings/1.jpg", // Replace with actual image paths
       title: "Business Capability Mapping",
       description:
         "Whether you already have your own Business Capability Model or plan to create one, CC&C can help you align to BIAN, providing a clear, strategic view of how technology and processes align with business objectives. Our capability maps serve as a foundation for transformation, enabling more effective planning, investment, and execution.",
     },
     {
       id: 2,
-      image: "/bian/training1.png",
+      image: "/service-offerings/2.jpg",
       title: "Enterprise Architecture Alignment to Standards",
       description:
         "We ensure enterprise architectures align with industry frameworks such as BIAN, TOGAF, and IT4IT, driving interoperability, compliance, and future-proofed technology ecosystems. Our expertise helps banks and financial institutions seamlessly integrate best practices into their architecture strategi",
     },
     {
       id: 3,
-      image: "/bian/training1.png",
+      image: "/service-offerings/3.jpg",
       title: "Proof of Value",
       description:
         "We validate the feasibility and business impact of new architectural models, solutions, and transformations through structured proofs of value. By applying industry standards like BIAN, we ensure organizations gain measurable insights before committing to full-scale implementation.",
     },
     {
       id: 1,
-      image: "/bian/training1.png", // Replace with actual image paths
+      image: "/service-offerings/4.jpg", // Replace with actual image paths
       title: "Design Evaluation & Certification",
       description:
         "Our rigorous evaluation and certification process assesses architecture and solution designs against industry benchmarks, ensuring compliance, efficiency, and long-term sustainability. We help organizations mitigate risks, enhance interoperability, and achieve architectural excellence.",
     },
     {
       id: 2,
-      image: "/bian/training1.png",
+      image: "/service-offerings/5.jpg",
       title: "Practitioner and Executive Training",
       description:
         "We provide specialized training programs for architects, executives, and business and technology leaders, covering BIAN, enterprise architecture, and digital transformation best practices. Our tailored approach ensures organizations build in-house expertise to drive continuous innovation.",
     },
     {
       id: 3,
-      image: "/bian/training1.png",
+      image: "/service-offerings/6.jpg",
       title: "Discovery Workshops and Use Case Ideation",
       description:
         "Through targeted workshops, we help organizations identify high-impact transformation opportunities, refine use cases, and create actionable roadmaps. Our structured approach aligns business and IT teams, ensuring initiatives deliver tangible value.",
     },
-    {
-      id: 1,
-      image: "/bian/training1.png", // Replace with actual image paths
-      title: "ANZIIF",
-      description:
-        "Insurance and finance industry professional association ANZIIF wanted to elevate the member experience on its Sitecore website.",
-    },
+    // {
+    //   id: 1,
+    //   image: "/service-offerings/.jpg", // Replace with actual image paths
+    //   title: "ANZIIF",
+    //   description:
+    //     "Insurance and finance industry professional association ANZIIF wanted to elevate the member experience on its Sitecore website.",
+    // },
     {
       id: 2,
-      image: "/bian/training1.png",
+      image: "/service-offerings/7.jpg",
       title: "BIAN-aligned Design & Implementation",
       description:
         "As a globally accredited BIAN training provider, we design and implement BIAN-aligned architectures that drive standardization, agility, and operational efficiency. Our expertise ensures seamless adoption of BIAN principles across banking ecosystems.",
     },
     {
       id: 3,
-      image: "/bian/training1.png",
+      image: "/service-offerings/8.jpg",
       title: "Architecture Governance",
       description:
         "We establish robust governance frameworks to enforce architectural standards, drive consistency, and enable effective decision-making across enterprise initiatives. Our governance models help organizations reduce complexity, improve compliance, and accelerate transformation efforts.",
@@ -256,7 +265,7 @@ export default function Bian() {
   const courses = [
     {
       id: 1,
-      image: "/bian/training1.png", // Replace with actual image URL
+      image: "/training/1.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
         "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
@@ -268,7 +277,7 @@ export default function Bian() {
     },
     {
       id: 2,
-      image: "/bian/training1.png", // Replace with actual image URL
+      image: "/training/2.jpg", // Replace with actual image URL
       title: "BIAN Data Architecture & Design Specialist Certification",
       instructor:
         "Learn BIAN’s Business Object Model (BOM) in detail through an end-to-end use case. Your trainer is a BIAN-certified data specialist who can provide a practical working knowledge of how BIAN can be utilized to design a world-class data architecture.Learn More.",
@@ -280,7 +289,19 @@ export default function Bian() {
     },
     {
       id: 1,
-      image: "/bian/training1.png", // Replace with actual image URL
+      image: "/training/3.jpg", // Replace with actual image URL
+      title: "BIAN Foundation Certification Training",
+      instructor:
+        "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
+      rating: 4.7,
+      reviews: 358435,
+      price: 549,
+      originalPrice: 3299,
+      badges: ["Learn more"],
+    },
+    {
+      id: 1,
+      image: "/training/1.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
         "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
@@ -292,7 +313,7 @@ export default function Bian() {
     },
     {
       id: 2,
-      image: "/bian/training1.png", // Replace with actual image URL
+      image: "/training/2.jpg", // Replace with actual image URL
       title: "BIAN Data Architecture & Design Specialist Certification",
       instructor:
         "Learn BIAN’s Business Object Model (BOM) in detail through an end-to-end use case. Your trainer is a BIAN-certified data specialist who can provide a practical working knowledge of how BIAN can be utilized to design a world-class data architecture.Learn More.",
@@ -304,55 +325,7 @@ export default function Bian() {
     },
     {
       id: 1,
-      image: "/bian/training1.png", // Replace with actual image URL
-      title: "BIAN Foundation Certification Training",
-      instructor:
-        "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
-      rating: 4.7,
-      reviews: 358435,
-      price: 549,
-      originalPrice: 3299,
-      badges: ["Learn more"],
-    },
-    {
-      id: 2,
-      image: "/bian/training1.png", // Replace with actual image URL
-      title: "BIAN Data Architecture & Design Specialist Certification",
-      instructor:
-        "Learn BIAN’s Business Object Model (BOM) in detail through an end-to-end use case. Your trainer is a BIAN-certified data specialist who can provide a practical working knowledge of how BIAN can be utilized to design a world-class data architecture.Learn More.",
-      rating: 4.7,
-      reviews: 429680,
-      price: 499,
-      originalPrice: 3099,
-      badges: ["Learn more"],
-    },
-    {
-      id: 1,
-      image: "/bian/training1.png", // Replace with actual image URL
-      title: "BIAN Foundation Certification Training",
-      instructor:
-        "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
-      rating: 4.7,
-      reviews: 358435,
-      price: 549,
-      originalPrice: 3299,
-      badges: ["Learn more"],
-    },
-    {
-      id: 2,
-      image: "/bian/training1.png", // Replace with actual image URL
-      title: "BIAN Data Architecture & Design Specialist Certification",
-      instructor:
-        "Learn BIAN’s Business Object Model (BOM) in detail through an end-to-end use case. Your trainer is a BIAN-certified data specialist who can provide a practical working knowledge of how BIAN can be utilized to design a world-class data architecture.Learn More.",
-      rating: 4.7,
-      reviews: 429680,
-      price: 499,
-      originalPrice: 3099,
-      badges: ["Learn more"],
-    },
-    {
-      id: 1,
-      image: "/bian/training1.png", // Replace with actual image URL
+      image: "/training/3.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
         "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
@@ -374,9 +347,11 @@ export default function Bian() {
       >
         <div className="w-[1128px] h-[88px] relative bg-white rounded-[100px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
           <div className="h-6 left-[258px] top-[32px] absolute inline-flex justify-start items-center gap-8">
-            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-              Why us
-            </div>
+            <Link href="/">
+              <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
+                Why us
+              </div>
+            </Link>
             <Link href="/bian">
               <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
                 Banking & BIAN
@@ -451,34 +426,44 @@ export default function Bian() {
           A four-step process using BIAN to simplify and modernize your banking
           architecture
         </p>
-        <section className="py-12 flex justify-center items-center  px-6">
-          <div className=" space-y-8  max-w-[1300px]">
+        <section className="py-12 flex justify-center items-center  ">
+          <div className="  grid grid-cols-2 items-center gap-10 max-w-[1400px]">
             {trainings.map((training) => (
-              <div
-                key={training.id}
-                className="flex flex-col md:flex-row w- justify-  items-center  gap-10"
-              >
-                <div className="w-full md:w-1/2 ">
-                  <Image
-                    src={training.image}
-                    alt={training.title}
-                    width={400}
-                    height={250}
-                    className="rounded-lg shadow-md"
-                  />
-                </div>
+              <div key={training.id} className="flex gap-10  items-center ">
+                <Image
+                  src={training.image}
+                  alt={training.title}
+                  width={200}
+                  height={250}
+                  className="rounded-lg xl:h-[200px] xl:w-[200px]"
+                />
                 <div className="w-full ">
                   <h3 className="text-lg font-semibold">{training.title}</h3>
                   <ul className="">
                     <li className="text-gray-600 mt-2 c">
                       {training.description}
+                    </li>
+                    <li className="text-gray-600 mt-2 c">
+                      {training.description1}
                     </li>{" "}
+                    <li className="text-gray-600 mt-2 c">
+                      {training.description2}
+                    </li>{" "}
+                    <li className="text-gray-600 mt-2 c">
+                      {training.description3}
+                    </li>{" "}
+                    <li className="text-gray-600 mt-2 c">
+                      {training.description4}
+                    </li>{" "}
+                    <li className="text-gray-600 mt-2 c">
+                      {training.description5}
+                    </li>
                   </ul>
-                  <Link href={training.link}>
+                  {/* <Link href={training.link}>
                     <button className="mt-4 bg-[#0c71c3] text-white px-4 py-2 rounded-md ">
                       Learn More
                     </button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}
@@ -503,7 +488,7 @@ export default function Bian() {
                 className="w-full   object-cover rounded-lg"
               />
               <h3 className="text-lg font-bold mt-4">{card.title}</h3>
-              <p className="text-gray-600 mt-2">{card.description}</p>
+              <p className="text-gray-600 mt-3">{card.description}</p>
             </div>
           ))}
         </div>
@@ -546,7 +531,7 @@ export default function Bian() {
               />
               <div className="mt-4">
                 <h3 className="text-xl font-bold">{course.title}</h3>
-                <p className="text-gray-600 text-base mt-1">
+                <p className="text-gray-600 text-base mt-3">
                   {course.instructor}
                 </p>
                 <div className="flex gap-2 mt-3">
