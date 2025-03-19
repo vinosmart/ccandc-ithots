@@ -451,8 +451,8 @@ export default function Bian() {
           A four-step process using BIAN to simplify and modernize your banking
           architecture
         </p>
-        <section className="py-12 px-6">
-          <div className="max-w-[1024px] space-y-8">
+        <section className="py-12 flex justify-center items-center  px-6">
+          <div className=" space-y-8  max-w-[1300px]">
             {trainings.map((training) => (
               <div
                 key={training.id}
@@ -489,18 +489,18 @@ export default function Bian() {
         <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
           CC&C Service Offerings
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 py-10  mx-auto">
           {CardData.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden border p-6"
+              className="bg-white rounded-xl shadow-lg 2xl:w-[400px] overflow-hidden border p-6"
             >
               <Image
                 src={card.image}
                 alt={card.title}
                 width={400}
                 height={250}
-                className="w-full  object-cover rounded-lg"
+                className="w-full   object-cover rounded-lg"
               />
               <h3 className="text-lg font-bold mt-4">{card.title}</h3>
               <p className="text-gray-600 mt-2">{card.description}</p>
@@ -531,11 +531,11 @@ export default function Bian() {
         <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
           Our BIAN Training
         </h1>
-        <div className=" px-6 py-10 grid grid-cols-1 md:grid-cols-3  justify-center w-full gap-6">
+        <div className=" px-6 py-10 flex flex-wrap max-w-[1440px]    justify-center w-full gap-6">
           {visibleCourses.map((course) => (
             <div
               key={course.id}
-              className="bg-white p-6  rounded-lg shadow-lg border"
+              className="bg-white p-6 xl:w-[400px]   rounded-lg shadow-lg border"
             >
               <Image
                 src={course.image}
