@@ -427,7 +427,7 @@ export default function Bian() {
           architecture
         </p>
         <section className="py-12 flex justify-center items-center  ">
-          <div className="  grid grid-cols-2 items-center gap-10 max-w-[1400px]">
+          <div className="  grid grid-cols-2 items-center gap-40 max-w-[1400px]">
             {trainings.map((training) => (
               <div key={training.id} className="flex gap-10  items-center ">
                 <Image
@@ -439,7 +439,7 @@ export default function Bian() {
                 />
                 <div className="w-full ">
                   <h3 className="text-lg font-semibold">{training.title}</h3>
-                  <ul className="">
+                  <ul className="mt-3.5">
                     <li className="text-gray-600 mt-2 c">
                       {training.description}
                     </li>
