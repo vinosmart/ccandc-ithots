@@ -407,7 +407,7 @@ export default function Bian() {
         </div>
       </div>
 
-      <section className=" mx-auto flex w-full gap-20  pt-[320px] justify-center items-center">
+      <section className=" mx-auto flex w-full gap-20  pt-[360px] 2xl:pt-[320px] justify-center items-center">
         <Image
           className="w-[300px] h-[300px] left-[40px] "
           src="/bian/home.png"
@@ -434,7 +434,7 @@ export default function Bian() {
           institutions.
         </h1>
         <Image
-          className="w-[1440px] h-[1440px] left-[40px] mt-40 rounded"
+          className="2xl:w-[1440px] w-[1300px] mt-40 rounded"
           src="/bian/bian.jpeg"
           alt="Company Logo"
           width={1440}
@@ -489,18 +489,18 @@ export default function Bian() {
         <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
           CC&C Service Offerings
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10  mx-auto">
           {CardData.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden border p-4"
+              className="bg-white rounded-xl shadow-lg overflow-hidden border p-6"
             >
               <Image
                 src={card.image}
                 alt={card.title}
                 width={400}
                 height={250}
-                className="w-full h-[200px] object-cover rounded-lg"
+                className="w-full  object-cover rounded-lg"
               />
               <h3 className="text-lg font-bold mt-4">{card.title}</h3>
               <p className="text-gray-600 mt-2">{card.description}</p>
@@ -527,22 +527,22 @@ export default function Bian() {
           ))}
         </div>
       </section>
-      <section className="mx-auto flex w-full flex-col pt-40 justify-center items-center">
+      <section className="flex w-full flex-col pt-40 justify-center items-center">
         <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
-          How Does BIAN Deliver Benefit
+          Our BIAN Training
         </h1>
-        <div className="max-w-[1440px] mx-auto px-6 py-10 flex flex-wrap justify-center gap-6">
+        <div className=" px-6 py-10 grid grid-cols-1 md:grid-cols-3  justify-center w-full gap-6">
           {visibleCourses.map((course) => (
             <div
               key={course.id}
-              className="bg-white p-4 w-[400px] rounded-lg shadow-lg border"
+              className="bg-white p-6  rounded-lg shadow-lg border"
             >
               <Image
                 src={course.image}
                 alt={course.title}
                 width={400}
                 height={160}
-                className="rounded-lg w-full h-40 object-cover"
+                className="rounded-lg w-full object-cover"
               />
               <div className="mt-4">
                 <h3 className="text-xl font-bold">{course.title}</h3>
