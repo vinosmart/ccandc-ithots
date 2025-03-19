@@ -121,7 +121,7 @@ export default function Bian() {
       link: "/foundation-training",
     },
     {
-      id: 1,
+      id: 2,
       title: "Step 2: Map and classify",
       description: "  Define BIAN-based Service Landscape and map applications",
       description1: " Classify API’s and identify degree of BIAN alignment",
@@ -131,7 +131,7 @@ export default function Bian() {
       link: "/foundation-training",
     },
     {
-      id: 1,
+      id: 3,
       title: "Step 3: Align and wrap",
       description: " Group capabilities and align to business domains",
       description1:
@@ -142,7 +142,7 @@ export default function Bian() {
       link: "/foundation-training",
     },
     {
-      id: 1,
+      id: 4,
       title: "Step 4: Rationalize and reuse",
       description: " Rationalize capabilities to BIAN Service Domains",
       description1: "  Reusable BIAN-aligned API’s",
@@ -176,21 +176,21 @@ export default function Bian() {
         "We validate the feasibility and business impact of new architectural models, solutions, and transformations through structured proofs of value. By applying industry standards like BIAN, we ensure organizations gain measurable insights before committing to full-scale implementation.",
     },
     {
-      id: 1,
+      id: 4,
       image: "/service-offerings/4.jpg", // Replace with actual image paths
       title: "Design Evaluation & Certification",
       description:
         "Our rigorous evaluation and certification process assesses architecture and solution designs against industry benchmarks, ensuring compliance, efficiency, and long-term sustainability. We help organizations mitigate risks, enhance interoperability, and achieve architectural excellence.",
     },
     {
-      id: 2,
+      id: 5,
       image: "/service-offerings/5.jpg",
       title: "Practitioner and Executive Training",
       description:
         "We provide specialized training programs for architects, executives, and business and technology leaders, covering BIAN, enterprise architecture, and digital transformation best practices. Our tailored approach ensures organizations build in-house expertise to drive continuous innovation.",
     },
     {
-      id: 3,
+      id: 6,
       image: "/service-offerings/6.jpg",
       title: "Discovery Workshops and Use Case Ideation",
       description:
@@ -204,14 +204,14 @@ export default function Bian() {
     //     "Insurance and finance industry professional association ANZIIF wanted to elevate the member experience on its Sitecore website.",
     // },
     {
-      id: 2,
+      id: 7,
       image: "/service-offerings/7.jpg",
       title: "BIAN-aligned Design & Implementation",
       description:
         "As a globally accredited BIAN training provider, we design and implement BIAN-aligned architectures that drive standardization, agility, and operational efficiency. Our expertise ensures seamless adoption of BIAN principles across banking ecosystems.",
     },
     {
-      id: 3,
+      id: 8,
       image: "/service-offerings/8.jpg",
       title: "Architecture Governance",
       description:
@@ -288,7 +288,7 @@ export default function Bian() {
       badges: ["Learn more"],
     },
     {
-      id: 1,
+      id: 3,
       image: "/training/3.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
@@ -300,7 +300,7 @@ export default function Bian() {
       badges: ["Learn more"],
     },
     {
-      id: 1,
+      id: 4,
       image: "/training/1.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
@@ -312,7 +312,7 @@ export default function Bian() {
       badges: ["Learn more"],
     },
     {
-      id: 2,
+      id: 5,
       image: "/training/2.jpg", // Replace with actual image URL
       title: "BIAN Data Architecture & Design Specialist Certification",
       instructor:
@@ -324,7 +324,7 @@ export default function Bian() {
       badges: ["Learn more"],
     },
     {
-      id: 1,
+      id: 6,
       image: "/training/3.jpg", // Replace with actual image URL
       title: "BIAN Foundation Certification Training",
       instructor:
