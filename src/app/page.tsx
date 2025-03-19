@@ -10,6 +10,8 @@ import StatsCounter from "../../components/StatsCounter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+
 // import { Typewriter } from "react-simple-typewriter";
 const testimonials = [
   {
@@ -176,9 +178,11 @@ export default function Home() {
             <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Why us
             </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-              Banking & BIAN
-            </div>
+            <Link href="/bian">
+              <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
+                Banking & BIAN
+              </div>
+            </Link>
             <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
               Architecture & tools
             </div>
@@ -209,8 +213,9 @@ export default function Home() {
         className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20"
       >
         <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
-          Powering Digital Transformation <br /> Through World-Class
-          Architecture
+          Powering Digital Transformation <br />
+          Through{" "}
+          <span className="text-[#F68827]">World-Class Architecture</span>
           {/* <span className="text-[#F68827]">
             <Typewriter
               words={[" "]}
@@ -222,8 +227,8 @@ export default function Home() {
           </span> */}
         </h1>
         <h4 className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
-          Architecture by Design Consultancy Skills Transformation CC&C
-          Solutions has been providing industry-leading architecture consulting.
+          CC&C has been helping the largest companies get architecture right
+          for almost 20 years
         </h4>
         <button className="mt-[48px] flex items-center gap-2 bg-[#0C71C3] text-white  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
           <span>
