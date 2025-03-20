@@ -339,7 +339,7 @@ export default function Bian() {
   const [showAll, setShowAll] = useState(false);
   const visibleCourses = showAll ? courses : courses.slice(0, 3);
   return (
-    <div className="bg-[url(/bg.png)] bg-cover bg-center h-screen font-sans">
+    <div className=" font-sans">
       <div
         className={`flex justify-center items-center fixed top-10 w-full z-[999999] transition-transform duration-300 ${
           isVisible ? " block" : "hidden"
@@ -382,7 +382,7 @@ export default function Bian() {
         </div>
       </div>
 
-      <section className=" mx-auto flex w-full gap-20  pt-[360px] 2xl:pt-[320px] justify-center items-center">
+      <section className=" mx-auto flex w-full gap-20 bg-[url(/bg.png)] bg-cover bg-center h-screen  pt-[120px] justify-center items-center">
         <Image
           className="w-[300px] h-[300px] left-[40px] "
           src="/bian/home.png"
@@ -402,7 +402,7 @@ export default function Bian() {
         </div>
       </section>
 
-      <section className=" mx-auto flex w-full flex-col  pt-[420px] justify-center items-center">
+      <section className=" mx-auto flex w-full flex-col  pt-[120px] justify-center items-center">
         <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
           Navigate the complexities of legacy systems and architecture with CC&C
           Solutions – trusted partners to the world’s leading financial
@@ -427,7 +427,7 @@ export default function Bian() {
           architecture
         </p>
         <section className="py-12 flex justify-center items-center  ">
-          <div className="  grid grid-cols-2 items-center gap-40 max-w-[1400px]">
+          <div className="  grid grid-cols-2 items-center gap-[80px] max-w-[1400px]">
             {trainings.map((training) => (
               <div key={training.id} className="flex gap-10  items-center ">
                 <Image
