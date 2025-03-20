@@ -221,42 +221,54 @@ export default function Bian() {
   const features = [
     {
       id: 1,
-      icon: <FaCogs className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaCogs className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It is Canonical",
       description:
         "The business function component designs BIAN specifies are standard for every use and user. The business role or purpose of each component can represent system needs of any bank and can be consistently interpreted in any deployment.",
     },
     {
       id: 2,
-      icon: <FaBolt className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaBolt className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It Enables Agility",
       description:
         "By partitioning a bank’s functionality, data, and interfaces into discrete self-contained service centers and breaking down monolithic design, BIAN enables banks to innovate and get to production much faster.",
     },
     {
       id: 3,
-      icon: <FaLayerGroup className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaLayerGroup className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It is Stable Over Time",
       description:
         "The BIAN model defines what each component does but does not attempt to define how it should do it. This ensures stability over time.",
     },
     {
       id: 4,
-      icon: <FaPuzzlePiece className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaPuzzlePiece className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It Supports Composability",
       description:
         "When solution providers and banks align with the model, banks can more easily mix and match system components developed by different providers.",
     },
     {
       id: 5,
-      icon: <FaChartLine className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaChartLine className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It can be adopted incrementally",
       description:
         "Systems built aligning to the model can be integrated alongside legacy systems and adopted incrementally while evolving with best practices.",
     },
     {
       id: 6,
-      icon: <FaStream className="text-[#0c71c3] text-5xl" />,
+      icon: (
+        <FaStream className="text-[#0c71c3] text-5xl group-hover:text-white group" />
+      ),
       title: "It Helps Eliminate Complexity",
       description:
         "BIAN components support discrete and autonomous business functions, reducing overlaps, duplication, and redundancies in system design.",
@@ -401,19 +413,19 @@ export default function Bian() {
       </div>
 
       <section className=" mx-auto flex w-full gap-20 bg-[url(/bg.png)] bg-cover bg-center h-screen  pt-[120px] justify-center items-center">
-        <Image
+        {/* <Image
           className="w-[300px] h-[300px] left-[40px] "
           src="/bian/home.png"
           alt="Company Logo"
           width={300}
           height={300}
-        />
-        <div className="">
-          <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
+        /> */}
+        <div className="justify-center items-center flex flex-col">
+          <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 text-center leading-[90px]">
             Future-Proof Your Banking <br />{" "}
             <span className="text-[#F68827]">Architecture With BIAN</span>
           </h1>
-          <p className="text-lg font-medium max-w-[600px] mt-6">
+          <p className="text-lg font-medium text-center max-w-[600px] mt-6">
             CC&C’s leadership position in BIAN certification training, adoption,
             and implementation is helping banks fast-track their BIAN journey.
           </p>
@@ -523,7 +535,7 @@ export default function Bian() {
               key={feature.id}
               className="bg-white hover:bg-[#F68827] p-10 rounded-tl-3xl  rounded-b-3xl  drop-shadow-xl border flex items-start gap-4 group"
             >
-              <div>{feature.icon}</div>
+              <div className="">{feature.icon}</div>
               <div className="text-[#2A2A2A] group-hover:text-white">
                 <h3 className="text-[25px] font-semibold">{feature.title}</h3>
                 <p className=" text-base mt-2">{feature.description}</p>
@@ -628,7 +640,7 @@ export default function Bian() {
                     <p className="text-[#444444] text-lg mt-3">
                       {testimonial.review}
                     </p>
-                    <div className="text-yellow-400 absolute bottom-4 flex justify-between mt-10 space-x-1">
+                    <div className="text-yellow-400 absolute bottom-4  w-full flex   mt-10 gap-20">
                       <Image
                         src={"/kama2.svg"}
                         alt="star"
