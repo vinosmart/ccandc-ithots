@@ -311,30 +311,6 @@ export default function Bian() {
       originalPrice: 3299,
       badges: ["Learn more"],
     },
-    {
-      id: 5,
-      image: "/training/2.jpg", // Replace with actual image URL
-      title: "BIAN Data Architecture & Design Specialist Certification",
-      instructor:
-        "Learn BIAN’s Business Object Model (BOM) in detail through an end-to-end use case. Your trainer is a BIAN-certified data specialist who can provide a practical working knowledge of how BIAN can be utilized to design a world-class data architecture.Learn More.",
-      rating: 4.7,
-      reviews: 429680,
-      price: 499,
-      originalPrice: 3099,
-      badges: ["Learn more"],
-    },
-    {
-      id: 6,
-      image: "/training/3.jpg", // Replace with actual image URL
-      title: "BIAN Foundation Certification Training",
-      instructor:
-        "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
-      rating: 4.7,
-      reviews: 358435,
-      price: 549,
-      originalPrice: 3299,
-      badges: ["Learn more"],
-    },
   ];
   const [showAll, setShowAll] = useState(false);
   const visibleCourses = showAll ? courses : courses.slice(0, 3);
@@ -501,10 +477,10 @@ export default function Bian() {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="bg-white p-10 rounded-tl-3xl  rounded-b-3xl  drop-shadow-xl border flex items-start gap-4"
+              className="bg-white hover:bg-[#F68827] p-10 rounded-tl-3xl  rounded-b-3xl  drop-shadow-xl border flex items-start gap-4 group"
             >
               <div>{feature.icon}</div>
-              <div className="text-[#2A2A2A]">
+              <div className="text-[#2A2A2A] group-hover:text-white">
                 <h3 className="text-[25px] font-semibold">{feature.title}</h3>
                 <p className=" text-base mt-2">{feature.description}</p>
               </div>
