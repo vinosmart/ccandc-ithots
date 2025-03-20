@@ -312,6 +312,48 @@ export default function Bian() {
       badges: ["Learn more"],
     },
   ];
+  const videoCards = [
+    {
+      id: 1,
+      image: "/cc/august24.jpg", // Replace with actual image path
+      title: "Learnings and tips for rolling out BIAN in your organization",
+      description:
+        "Interested in adopting BIAN in your enterprise, and keen to benefit from the learnings of those who have gone before you?",
+      details:
+        "Mamta Sarangal and Nishan Jebanasam from CC and C Solutions will share learnings from the work done with banks across Australia, Europe, North America, and Asia so that you can maximise the success of your own BIAN journey.",
+      buttonText: "Watch Video",
+    },
+    {
+      id: 2,
+      image: "/cc/august24.jpg",
+      title: "Understanding BIAN Framework for Digital Banking",
+      description:
+        "Discover how BIAN helps digital banking transformation and enhances interoperability.",
+      details:
+        "Experts discuss best practices for leveraging BIAN’s architecture to drive efficiency in digital banking solutions.",
+      buttonText: "Watch Video",
+    },
+    {
+      id: 3,
+      image: "/cc/august24.jpg",
+      title: "BIAN Adoption Case Study: Success Stories",
+      description:
+        "Learn how banks have successfully adopted BIAN to streamline their systems and improve agility.",
+      details:
+        "Real-world case studies showcasing how BIAN implementation led to cost savings and improved banking operations.",
+      buttonText: "Watch Video",
+    },
+    {
+      id: 4,
+      image: "/cc/august24.jpg",
+      title: "Future Trends in Banking with BIAN Standards",
+      description:
+        "Explore how emerging technologies align with BIAN to shape the future of banking.",
+      details:
+        "Industry leaders share insights on how AI, blockchain, and cloud computing integrate with BIAN for next-gen banking.",
+      buttonText: "Watch Video",
+    },
+  ];
   const [showAll, setShowAll] = useState(false);
   const visibleCourses = showAll ? courses : courses.slice(0, 3);
   return (
@@ -379,7 +421,7 @@ export default function Bian() {
       </section>
 
       <section className=" mx-auto flex w-full flex-col  pt-[120px] justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+        <h1 className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
           Navigate the complexities of legacy systems and architecture with CC&C
           Solutions – trusted partners to the world’s leading financial
           institutions.
@@ -393,8 +435,8 @@ export default function Bian() {
         />
       </section>
 
-      <section className=" mx-auto flex w-full flex-col  pt-20 justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+      <section className=" mx-auto flex w-full flex-col  pt-40 justify-center items-center">
+        <h1 className="text-[40px]  text-black/70 max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
           How CC&C helps banks move to a <br /> modern, composable, and agile
           architecture
         </h1>
@@ -446,8 +488,8 @@ export default function Bian() {
           </div>
         </section>
       </section>
-      <section className=" mx-auto flex w-full flex-col  pt-20 justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+      <section className=" mx-auto flex w-full flex-col  pt-40 justify-center items-center">
+        <h1 className="text-[40px]  text-black/70 max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
           CC&C Service Offerings
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 py-10  mx-auto">
@@ -469,8 +511,8 @@ export default function Bian() {
           ))}
         </div>
       </section>
-      <section className=" mx-auto flex w-full flex-col  pt-20 justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+      <section className=" mx-auto flex w-full flex-col  pt-40 justify-center items-center">
+        <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
           How Does BIAN Deliver Benefit
         </h1>
         <div className="max-w-[1440px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -489,7 +531,7 @@ export default function Bian() {
         </div>
       </section>
       <section className="flex w-full flex-col pt-40 justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+        <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
           Our BIAN Training
         </h1>
         <div className=" px-6 py-10 flex flex-wrap max-w-[1440px]    justify-center w-full gap-6">
@@ -532,7 +574,7 @@ export default function Bian() {
         </button>
       </section>
       <section className="flex w-full flex-col pt-40 justify-center items-center">
-        <h1 className="text-[40px] font-bold text-black/70 max-w-[1440px] text-center">
+        <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
           Our Banking Clients
         </h1>
         <Image
@@ -544,9 +586,12 @@ export default function Bian() {
         />
       </section>
       <section className="flex flex-col items-center justify-center mt-[202px]">
+        <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
+          Testimonials
+        </h1>
         <div className="md:w-[1128px]">
-          <div className="flex items-center justify-between  w-full ">
-            <h1 className=" text-black font-extrabold text-[56px]">
+          <div className="flex items-center justify-between pt-40 w-full ">
+            <h1 className=" text-black font-extrabold  text-[56px]">
               What our clients say
             </h1>
             <button className=" flex items-center gap-2 mt-5 bg-[#0C71C3] text-white  px-6 py-3 rounded-full text-lg font-semibold shadow-lg  transition">
@@ -624,7 +669,49 @@ export default function Bian() {
           </div>
         </div>
       </section>
-      <footer className="bg-[#0D2F4B] mt-[320px]">
+
+      <section className="max-w-[1440px] mx-auto px-6 py-16  mt-[202px]">
+        <h2 className=" sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/80 text-center mb-10">
+          BIAN Insights and Learnings
+        </h2>
+
+        <div className="flex flex-col gap-10">
+          {videoCards.map((video) => (
+            <div
+              key={video.id}
+              className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg"
+            >
+              {/* Left: Video Thumbnail */}
+              <div className="w-full md:w-1/2">
+                <Image
+                  src={video.image}
+                  alt={video.title}
+                  width={600}
+                  height={350}
+                  className="rounded-lg shadow-md"
+                />
+              </div>
+
+              {/* Right: Content */}
+              <div className="w-full md:w-1/2">
+                <h3 className="text-xl font-bold text-black/80">
+                  {video.title}
+                </h3>
+                <p className="text-lg text-black/70 mt-2">
+                  {video.description}
+                </p>
+                <p className="text-gray-600 text-base mt-2">{video.details}</p>
+
+                {/* Watch Video Button */}
+                <button className="mt-4 bg-[#0c71c3] text-white px-5 py-3 rounded-lg text-lg hover:bg-[#095a9c] transition">
+                  {video.buttonText}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <footer className="bg-[#0D2F4B] mt-[120px]">
         <div>
           <div className="flex justify-center items-center gap-20 pt-[50px] pb-8">
             <div className="flex flex-col gap-4">
