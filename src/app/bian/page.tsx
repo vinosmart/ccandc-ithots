@@ -16,10 +16,10 @@ import {
   FaStream,
 } from "react-icons/fa";
 export default function Bian() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   useEffect(() => {}, []);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -156,66 +156,59 @@ export default function Bian() {
   const CardData = [
     {
       id: 1,
-      image: "/service-offerings/1.jpg", // Replace with actual image paths
+      image: "/service-offerings/1.jpg",
       title: "Business Capability Mapping",
       description:
-        "Whether you already have your own Business Capability Model or plan to create one, CC&C can help you align to BIAN, providing a clear, strategic view of how technology and processes align with business objectives. Our capability maps serve as a foundation for transformation, enabling more effective planning, investment, and execution.",
+        "Align your business capabilities with BIAN for strategic planning and effective transformation.",
     },
     {
       id: 2,
       image: "/service-offerings/2.jpg",
       title: "Enterprise Architecture Alignment to Standards",
       description:
-        "We ensure enterprise architectures align with industry frameworks such as BIAN, TOGAF, and IT4IT, driving interoperability, compliance, and future-proofed technology ecosystems. Our expertise helps banks and financial institutions seamlessly integrate best practices into their architecture strategi",
+        "Ensure your architecture aligns with industry standards like BIAN, TOGAF, and IT4IT for compliance and interoperability.",
     },
     {
       id: 3,
       image: "/service-offerings/3.jpg",
       title: "Proof of Value",
       description:
-        "We validate the feasibility and business impact of new architectural models, solutions, and transformations through structured proofs of value. By applying industry standards like BIAN, we ensure organizations gain measurable insights before committing to full-scale implementation.",
+        "Validate new architectural models and solutions through structured proofs of value before full-scale implementation.",
     },
     {
       id: 4,
-      image: "/service-offerings/4.jpg", // Replace with actual image paths
+      image: "/service-offerings/4.jpg",
       title: "Design Evaluation & Certification",
       description:
-        "Our rigorous evaluation and certification process assesses architecture and solution designs against industry benchmarks, ensuring compliance, efficiency, and long-term sustainability. We help organizations mitigate risks, enhance interoperability, and achieve architectural excellence.",
+        "Assess and certify architecture designs against industry benchmarks for compliance and sustainability.",
     },
     {
       id: 5,
       image: "/service-offerings/5.jpg",
       title: "Practitioner and Executive Training",
       description:
-        "We provide specialized training programs for architects, executives, and business and technology leaders, covering BIAN, enterprise architecture, and digital transformation best practices. Our tailored approach ensures organizations build in-house expertise to drive continuous innovation.",
+        "Specialized training programs covering BIAN, enterprise architecture, and digital transformation best practices.",
     },
     {
       id: 6,
       image: "/service-offerings/6.jpg",
       title: "Discovery Workshops and Use Case Ideation",
       description:
-        "Through targeted workshops, we help organizations identify high-impact transformation opportunities, refine use cases, and create actionable roadmaps. Our structured approach aligns business and IT teams, ensuring initiatives deliver tangible value.",
+        "Identify high-impact transformation opportunities and create actionable roadmaps through targeted workshops.",
     },
-    // {
-    //   id: 1,
-    //   image: "/service-offerings/.jpg", // Replace with actual image paths
-    //   title: "ANZIIF",
-    //   description:
-    //     "Insurance and finance industry professional association ANZIIF wanted to elevate the member experience on its Sitecore website.",
-    // },
     {
       id: 7,
       image: "/service-offerings/7.jpg",
       title: "BIAN-aligned Design & Implementation",
       description:
-        "As a globally accredited BIAN training provider, we design and implement BIAN-aligned architectures that drive standardization, agility, and operational efficiency. Our expertise ensures seamless adoption of BIAN principles across banking ecosystems.",
+        "Design and implement BIAN-aligned architectures for standardization, agility, and operational efficiency.",
     },
     {
       id: 8,
       image: "/service-offerings/8.jpg",
       title: "Architecture Governance",
       description:
-        "We establish robust governance frameworks to enforce architectural standards, drive consistency, and enable effective decision-making across enterprise initiatives. Our governance models help organizations reduce complexity, improve compliance, and accelerate transformation efforts.",
+        "Establish governance frameworks to enforce architectural standards and drive consistency across initiatives.",
     },
   ];
   const features = [
@@ -274,7 +267,7 @@ export default function Bian() {
         "BIAN components support discrete and autonomous business functions, reducing overlaps, duplication, and redundancies in system design.",
     },
   ];
-  const courses = [
+  const visibleCourses = [
     {
       id: 1,
       image: "/training/1.jpg", // Replace with actual image URL
@@ -302,19 +295,8 @@ export default function Bian() {
     {
       id: 3,
       image: "/training/3.jpg", // Replace with actual image URL
-      title: "BIAN Foundation Certification Training",
-      instructor:
-        "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
-      rating: 4.7,
-      reviews: 358435,
-      price: 549,
-      originalPrice: 3299,
-      badges: ["Learn more"],
-    },
-    {
-      id: 4,
-      image: "/training/1.jpg", // Replace with actual image URL
-      title: "BIAN Foundation Certification Training",
+      title:
+        "BIAN Foundation Certification Training change to BIAN for Integration",
       instructor:
         "Attain in-depth knowledge and understanding of the BIAN standard’s banking architecture with BIAN Foundation Certification training from our experts. Your trainer is an experienced BIAN architect who can address the “how” and “why” along with the “what”",
       rating: 4.7,
@@ -366,8 +348,8 @@ export default function Bian() {
       buttonText: "Watch Video",
     },
   ];
-  const [showAll, setShowAll] = useState(false);
-  const visibleCourses = showAll ? courses : courses.slice(0, 3);
+  // const [showAll, setShowAll] = useState(false);
+  // const visibleCourses = showAll ? courses : courses.slice(0, 3);
   return (
     <div className=" font-sans">
       <div
@@ -433,13 +415,16 @@ export default function Bian() {
       </section>
 
       <section className=" mx-auto flex w-full flex-col  pt-[120px] justify-center items-center">
-        <h1 className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
-          Navigate the complexities of legacy systems and architecture with CC&C
-          Solutions – trusted partners to the world’s leading financial
-          institutions.
+        <h1 className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[46px] font-extrabold text-gray-900 leading-[70px]">
+          Navigate the complexities of legacy systems <br /> and architecture
+          with CC&C Solutions -
         </h1>
+        <p className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[46px] font-extrabold text-gray-900 leading-[70px]">
+          trusted partners to the world’s <br />
+          leading financial institutions.
+        </p>
         <Image
-          className="2xl:w-[1440px] w-[1300px] mt-40 rounded"
+          className=" w-[1000px] mt-40 rounded"
           src="/bian/bian.jpeg"
           alt="Company Logo"
           width={1440}
@@ -502,25 +487,25 @@ export default function Bian() {
           </div>
         </section>
       </section>
-      <section className=" mx-auto flex w-full flex-col  pt-40 justify-center items-center">
-        <h1 className="text-[40px]  text-black/70 max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
+      <section className=" mx-auto flex w-full flex-col bg-[#0C71C3]  pt-40 justify-center items-center">
+        <h1 className="text-[40px]  text-white max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold  leading-[70px]">
           CC&C Service Offerings
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 py-10  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4  px-6 py-10  mx-auto">
           {CardData.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-xl shadow-lg 2xl:w-[400px] overflow-hidden border p-6"
+              className="bg-[#0C71C3] text-white rounded-xl shadow-lg 2xl:w-[400px] overflow-hidden border "
             >
               <Image
                 src={card.image}
                 alt={card.title}
                 width={400}
                 height={250}
-                className="w-full   object-cover rounded-lg"
+                className="w-full object-cover "
               />
-              <h3 className="text-[24px] font-bold mt-4">{card.title}</h3>
-              <p className="text-gray-600  text-lg mt-3">{card.description}</p>
+              <h3 className="text-[24px] font-bold mt-4 px-6 ">{card.title}</h3>
+              <p className=" text-lg mt-3 px-6 pb-6">{card.description}</p>
             </div>
           ))}
         </div>
@@ -552,21 +537,21 @@ export default function Bian() {
           {visibleCourses.map((course) => (
             <div
               key={course.id}
-              className="bg-white p-6 xl:w-[400px]   rounded-lg shadow-lg border"
+              className="bg-white  xl:w-[400px]   rounded-lg shadow-lg border"
             >
               <Image
                 src={course.image}
                 alt={course.title}
                 width={400}
                 height={160}
-                className="rounded-lg w-full object-cover"
+                className="rounded-t-lg w-full object-cover"
               />
               <div className="mt-4">
-                <h3 className="text-[24px] font-bold">{course.title}</h3>
-                <p className="text-gray-600 text-lg mt-3">
+                <h3 className="text-[24px] font-bold px-6">{course.title}</h3>
+                <p className="text-gray-600 px-6 pb-6 text-lg mt-3">
                   {course.instructor}
                 </p>
-                <div className="flex gap-2 mt-3">
+                {/* <div className="flex gap-2 mt-3">
                   {course.badges.map((badge) => (
                     <span
                       key={badge}
@@ -575,29 +560,139 @@ export default function Bian() {
                       {badge}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
         </div>
-        <button
+        {/* <button
           onClick={() => setShowAll(!showAll)}
           className="bg-[#0c71c3] text-white px-6 py-3 rounded-lg text-lg mt-4 hover:bg-[#095a9c] transition"
         >
           {showAll ? "Show Less" : "Show More"}
-        </button>
+        </button> */}
       </section>
-      <section className="flex w-full flex-col pt-40 justify-center items-center">
-        <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
-          Our Banking Clients
-        </h1>
-        <Image
-          src="/bian/logos-bank.jpg"
-          alt=""
-          width={900}
-          height={550}
-          className="w-[1000px]  mt-20 border shadow-lg rounded-lg"
-        />
+      <section className="flex flex-col items-center justify-center mt-[202px]">
+        <div className="md:w-[1128px]">
+          <div className="flex flex-col    w-full ">
+            <h1 className=" text-black font-extrabold text-[56px]">
+              Our Clients
+            </h1>
+            <p className="text-[20px] text-gray-600 mt-6 max-w-[770px] text-justify tracking-tight">
+              As a multinational consultancy, we work with enterprises of all
+              sizes, from start-ups to global organizations, not-for-profits to
+              government bodies. We are committed to delivering excellent
+              outcomes for each client.
+            </p>
+          </div>
+          <div className="storybook-fix relative flex w-full max-w-[1100px] gap-4 md:gap-10 mt-20 items-center justify-center overflow-hidden rounded-md  bg-background flex-wrap">
+            <Image
+              src="/bian/bank-logo/1.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/2.jpeg"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/3.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px] "
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/4.jpeg"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/5.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/6.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px] "
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/7.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/8.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/9.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/bian/bank-logo/10.jpeg"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[250px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/bian/bank-logo/11.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/12.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+            <Image
+              src="/bian/bank-logo/13.jpeg"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/bian/bank-logo/14.jpg"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />{" "}
+            <Image
+              src="/bian/bank-logo/15.png"
+              alt="Company logo"
+              className=" object-contain w-[100px] md:w-[150px]"
+              width={150}
+              height={150}
+            />
+          </div>
+        </div>
       </section>
       <section className="flex flex-col items-center justify-center mt-[202px]">
         <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
@@ -690,7 +785,7 @@ export default function Bian() {
         </h2>
 
         <div className="flex flex-col gap-10">
-          {videoCards.map((video) => (
+          {videoCards.map((video, index) => (
             <div
               key={video.id}
               className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg"
@@ -717,7 +812,22 @@ export default function Bian() {
                 <p className="text-gray-600 text-base mt-2">{video.details}</p>
 
                 {/* Watch Video Button */}
-                <button className="mt-4 bg-[#0c71c3] text-white px-5 py-3 rounded-lg text-lg hover:bg-[#095a9c] transition">
+                <button
+                  className="mt-[24px] flex items-center gap-2 bg-[#0C71C3] hover:bg-white hover:text-black text-white w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg transition"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <span>
+                    <Image
+                      className="ml-4"
+                      src={
+                        hoveredIndex === index ? "/arrow2.svg" : "/arrow.svg"
+                      }
+                      alt="Arrow Icon"
+                      width={40}
+                      height={40}
+                    />
+                  </span>
                   {video.buttonText}
                 </button>
               </div>
@@ -725,6 +835,7 @@ export default function Bian() {
           ))}
         </div>
       </section>
+
       <footer className="bg-[#0D2F4B] mt-[120px]">
         <div>
           <div className="flex justify-center items-center gap-20 pt-[50px] pb-8">
