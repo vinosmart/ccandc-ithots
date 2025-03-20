@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,6 +18,7 @@ import {
   FaStream,
 } from "react-icons/fa";
 export default function Bian() {
+  const pathname = usePathname(); // Get current route
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   useEffect(() => {}, []);
   const [isVisible, setIsVisible] = useState(true);
@@ -156,56 +159,64 @@ export default function Bian() {
   const CardData = [
     {
       id: 1,
-      image: "/service-offerings/1.jpg",
+      icon: "/build.svg",
+
       title: "Business Capability Mapping",
       description:
         "Align your business capabilities with BIAN for strategic planning and effective transformation.",
     },
     {
       id: 2,
-      image: "/service-offerings/2.jpg",
+      icon: "/cloud.svg",
+
       title: "Enterprise Architecture Alignment to Standards",
       description:
         "Ensure your architecture aligns with industry standards like BIAN, TOGAF, and IT4IT for compliance and interoperability.",
     },
     {
       id: 3,
-      image: "/service-offerings/3.jpg",
+      icon: "/integration.svg",
+
       title: "Proof of Value",
       description:
         "Validate new architectural models and solutions through structured proofs of value before full-scale implementation.",
     },
     {
       id: 4,
-      image: "/service-offerings/4.jpg",
+      icon: "/build.svg",
+
       title: "Design Evaluation & Certification",
       description:
         "Assess and certify architecture designs against industry benchmarks for compliance and sustainability.",
     },
     {
       id: 5,
-      image: "/service-offerings/5.jpg",
+      icon: "/cloud.svg",
+
       title: "Practitioner and Executive Training",
       description:
         "Specialized training programs covering BIAN, enterprise architecture, and digital transformation best practices.",
     },
     {
       id: 6,
-      image: "/service-offerings/6.jpg",
+      icon: "/integration.svg",
+
       title: "Discovery Workshops and Use Case Ideation",
       description:
         "Identify high-impact transformation opportunities and create actionable roadmaps through targeted workshops.",
     },
     {
       id: 7,
-      image: "/service-offerings/7.jpg",
+      icon: "/build.svg",
+
       title: "BIAN-aligned Design & Implementation",
       description:
         "Design and implement BIAN-aligned architectures for standardization, agility, and operational efficiency.",
     },
     {
       id: 8,
-      image: "/service-offerings/8.jpg",
+      icon: "/cloud.svg",
+
       title: "Architecture Governance",
       description:
         "Establish governance frameworks to enforce architectural standards and drive consistency across initiatives.",
@@ -353,44 +364,44 @@ export default function Bian() {
   return (
     <div className=" font-sans">
       <div
-        className={`flex justify-center items-center fixed top-10 w-full z-[999999] transition-transform duration-300 ${
+        className={`flex justify-center items-center fixed  w-full z-[999999] transition-transform duration-300 ${
           isVisible ? " block" : "hidden"
         }`}
       >
-        <div className="w-[1128px] h-[88px] relative bg-white rounded-[100px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
-          <div className="h-6 left-[258px] top-[32px] absolute inline-flex justify-start items-center gap-8">
-            <Link href="/">
-              <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-                Why us
-              </div>
-            </Link>
-            <Link href="/bian">
-              <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-                Banking & BIAN
-              </div>
-            </Link>
-            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-              Architecture & tools
-            </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-              Training
-            </div>
-            <div className="relative justify-start text-[#393939] text-lg font-normal leading-normal">
-              Contact us
-            </div>
-          </div>
-          <div className="h-11 px-5 py-3 left-[943px] top-[22px] absolute bg-[#0c71c3] rounded-[100px] inline-flex justify-center items-center gap-2.5">
-            <div className="relative justify-start text-white text-base font-semibold leading-tight">
-              GET IN TOUCH
-            </div>
-          </div>
+        <div className="w-full mx-auto flex justify-center gap-20 items-center h-[88px] relative bg-white shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)] overflow-hidden">
           <Image
-            className="w-[90.49px] h-16 left-[40px] top-[12px] absolute"
+            className="w-[90.49px] h-16"
             src="/logo.png"
             alt="Company Logo"
             width={90.49}
             height={64}
           />
+
+          <div className="h-6 inline-flex items-center gap-8">
+            {[
+              { href: "/", label: "Why us" },
+              { href: "/bian", label: "Banking & BIAN" },
+              { href: "#", label: "Architecture & tools" },
+              { href: "#", label: "Training" },
+              { href: "#", label: "Contact us" },
+            ].map((item) => (
+              <Link key={item.href} href={item.href}>
+                <div
+                  className={`relative justify-start text-lg font-normal leading-normal ${
+                    pathname === item.href ? "text-[#0c71c3]" : "text-black"
+                  }`}
+                >
+                  {item.label}
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="h-11 px-5 py-3 bg-[#0c71c3] rounded-[100px] inline-flex justify-center items-center gap-2.5">
+            <div className="relative justify-start text-white text-base font-semibold leading-tight">
+              GET IN TOUCH
+            </div>
+          </div>
         </div>
       </div>
 
@@ -415,13 +426,20 @@ export default function Bian() {
       </section>
 
       <section className=" mx-auto flex w-full flex-col  pt-[120px] justify-center items-center">
-        <h1 className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[46px] font-extrabold text-gray-900 leading-[70px]">
+        {/* <h1 className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[46px] font-extrabold text-gray-900 leading-[70px]">
           Navigate the complexities of legacy systems <br /> and architecture
           with CC&C Solutions -
         </h1>
         <p className="text-[40px] max-w-[1440px] text-center text-4xl sm:text-[46px] font-extrabold text-gray-900 leading-[70px]">
           trusted partners to the world’s <br />
           leading financial institutions.
+        </p> */}
+        <h1 className="text-4xl sm:text-[50px] font-extrabold text-gray-900 text-center leading-[70px]">
+          Navigate the complexities of legacy systems <br /> and architecture
+          with CC&C Solutions -
+        </h1>
+        <p className="text-lg font-medium text-center max-w-[600px] mt-6">
+          Trusted partners to the world’s leading financial institutions.
         </p>
         <Image
           className=" w-[1000px] mt-40 rounded"
@@ -487,7 +505,53 @@ export default function Bian() {
           </div>
         </section>
       </section>
-      <section className=" mx-auto flex w-full flex-col bg-[#0C71C3]  pt-40 justify-center items-center">
+      <section className="bg-[#0C71C3] flex flex-col justify-center items-center mt-[160px] pb-[120px]">
+        <h1 className="text-[40px]  mt-40 text-white max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold  leading-[70px]">
+          CC&C Service Offerings
+        </h1>
+        {/* <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
+          The Financial Services industry is going througha radical
+          modernization, simplification, and interoperability renaissance across
+          the globe. But unlocking the potential for digital transformation
+          within your enterprise requires the right architecture experience,
+          disciplines, and capabilities
+        </p> */}
+        <div className="grid grid-cols-3 justify-center gap-6 mt-10">
+          {CardData.map((card) => (
+            <div
+              key={card.id}
+              className="group w-[360px] 2xl:w-[460px] p-6 relative bg-[#0c71c3] rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-white"
+            >
+              {/* Icon */}
+              <div className="w-[67.2px] h-16 left-[24px] top-[24px]  bg-[#0d9eff] group-hover:bg-[#0C71C3] rounded-xl inline-flex justify-center items-center">
+                <Image src={card.icon} alt="Icon" width={40} height={40} />
+              </div>
+
+              {/* Title */}
+              <h3 className="  text-[32px] mt-6 font-extrabold leading-10 text-[#eeeeee] group-hover:text-black transition-all duration-300">
+                {card.title}
+              </h3>
+
+              {/* Description */}
+              <div className=" text-xl leading-[35px]  mt-6 text-[#e0e0e0] group-hover:text-black transition-all duration-300">
+                {card.description}
+              </div>
+
+              {/* Learn More Button */}
+              {/* <button
+                      className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px]  px-5 py-2 bg-[#0d9eff] text-white  text-sm font-semibold flex items-center gap-2 transition-all duration-300
+                    opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
+                    >
+                      LEARN MORE
+                      <span>
+                        <Image src="/arrow.svg" alt="Arrow" width={16} height={16} />
+                      </span>
+                    </button> */}
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* <section className=" mx-auto flex w-full flex-col bg-[#0C71C3]  pt-40 justify-center items-center">
         <h1 className="text-[40px]  text-white max-w-[1440px] text-center text-4xl sm:text-[56px] font-extrabold  leading-[70px]">
           CC&C Service Offerings
         </h1>
@@ -509,7 +573,7 @@ export default function Bian() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <section className=" mx-auto flex w-full flex-col  pt-40 justify-center items-center">
         <h1 className="text-[40px] text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px] text-black/70 max-w-[1440px] text-center">
           How Does BIAN Deliver Benefit
@@ -617,7 +681,7 @@ export default function Bian() {
             <Image
               src="/bian/bank-logo/5.png"
               alt="Company logo"
-              className=" object-contain w-[100px] md:w-[150px]"
+              className=" object-contain w-[100px] bg-white md:w-[150px]"
               width={150}
               height={150}
             />
