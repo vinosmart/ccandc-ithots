@@ -444,7 +444,7 @@ export default function Bian() {
           A four-step process using BIAN to simplify and modernize your banking
           architecture
         </p>
-        <section className="py-12 flex justify-center items-center  ">
+        <section className="py-12 flex justify-center items-center  mt-14">
           <div className="  grid grid-cols-2 items-center gap-[80px] max-w-[1400px]">
             {trainings.map((training) => (
               <div key={training.id} className="flex gap-10  items-center ">
@@ -453,11 +453,13 @@ export default function Bian() {
                   alt={training.title}
                   width={200}
                   height={250}
-                  className="rounded-lg xl:h-[200px] xl:w-[200px]"
+                  className="rounded-lg -mt-6 xl:h-[200px] xl:w-[200px]"
                 />
                 <div className="w-full ">
-                  <h3 className="text-lg font-semibold">{training.title}</h3>
-                  <ul className="mt-3.5">
+                  <h3 className="text-[24px] font-semibold">
+                    {training.title}
+                  </h3>
+                  <ul className=" text-lg">
                     <li className="text-gray-600 mt-2 c">
                       {training.description}
                     </li>
@@ -505,8 +507,8 @@ export default function Bian() {
                 height={250}
                 className="w-full   object-cover rounded-lg"
               />
-              <h3 className="text-lg font-bold mt-4">{card.title}</h3>
-              <p className="text-gray-600 mt-3">{card.description}</p>
+              <h3 className="text-[24px] font-bold mt-4">{card.title}</h3>
+              <p className="text-gray-600  text-lg mt-3">{card.description}</p>
             </div>
           ))}
         </div>
@@ -548,8 +550,8 @@ export default function Bian() {
                 className="rounded-lg w-full object-cover"
               />
               <div className="mt-4">
-                <h3 className="text-xl font-bold">{course.title}</h3>
-                <p className="text-gray-600 text-base mt-3">
+                <h3 className="text-[24px] font-bold">{course.title}</h3>
+                <p className="text-gray-600 text-lg mt-3">
                   {course.instructor}
                 </p>
                 <div className="flex gap-2 mt-3">
