@@ -460,7 +460,7 @@ export default function Bian() {
           architecture
         </p>
         <section className="py-12 flex justify-center items-center  mt-14">
-          <div className="  grid grid-cols-2 items-center gap-[80px] max-w-[1400px]">
+          <div className="  grid grid-cols-2 items-center gap-[60px] max-w-[1400px]">
             {trainings.map((training) => (
               <div key={training.id} className="flex gap-10  items-center ">
                 <Image
@@ -516,7 +516,7 @@ export default function Bian() {
           within your enterprise requires the right architecture experience,
           disciplines, and capabilities
         </p> */}
-        <div className="grid grid-cols-3 justify-center gap-6 mt-10">
+        <div className="grid grid-cols-3 justify-center gap-6 mt-40">
           {CardData.map((card) => (
             <div
               key={card.id}
@@ -744,7 +744,7 @@ export default function Bian() {
             <Image
               src="/bian/bank-logo/14.jpg"
               alt="Company logo"
-              className=" object-contain w-[100px] md:w-[150px]"
+              className=" object-contain w-[100px] md:w-[90px]"
               width={150}
               height={150}
             />{" "}
