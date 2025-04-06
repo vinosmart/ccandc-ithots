@@ -379,11 +379,12 @@ export default function Bian() {
 
           <div className="h-6 inline-flex items-center gap-8">
             {[
-              { href: "/", label: "Why us" },
-              { href: "/bian", label: "Banking & BIAN" },
-              { href: "#", label: "Architecture & tools" },
-              { href: "#", label: "Training" },
-              { href: "#", label: "Contact us" },
+              { href: "/", label: "Partners" },
+              { href: "#", label: "Consulting" },
+              { href: "/course", label: "BIAN" },
+              { href: "#", label: "Partners" },
+              { href: "#", label: "Contact" },
+              { href: "#", label: "About" },
             ].map((item) => (
               <Link key={item.href} href={item.href}>
                 <div

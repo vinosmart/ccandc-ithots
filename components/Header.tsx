@@ -18,11 +18,11 @@ const Navbar = () => {
 
       <div className="h-6 inline-flex items-center gap-8">
         {[
-          { href: "/", label: "Why us" },
-          { href: "/bian", label: "Banking & BIAN" },
-          { href: "/architecture", label: "Architecture & tools" },
-          { href: "/training", label: "Training" },
-          { href: "/contact", label: "Contact us" },
+          { href: "/", label: "Partners" },
+          { href: "/course", label: "Consulting" },
+          { href: "/architecture", label: "BIAN" },
+          { href: "/training", label: "Partners" },
+          { href: "/contact", label: "Contact" },
         ].map((item) => (
           <Link key={item.href} href={item.href}>
             <div

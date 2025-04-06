@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 // import Marquee from "../../components/marquee";
-import StatsCounter from "../../components/StatsCounter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -14,6 +13,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // import { Typewriter } from "react-simple-typewriter";
+
 const testimonials = [
   {
     name: "Jerome Bell",
@@ -81,64 +81,70 @@ const testimonials = [
 ];
 const cardData = [
   {
-    title: "Banking Architecture",
+    title: "TOGAF®",
     description:
-      "We work in close partnership with leading industry bodies to develop the deep expertise and tools that can radically simplify and modernize your banking landscape.",
-    icon: "/build.svg",
+      "Earn the most up-to-date TOGAF certification, based on the TOGAF Standard, 10th Edition. Learn with the world’s leading TOGAF training company",
+    icon: "/courses/1.png",
+    link: "/togaf",
   },
   {
-    title: "BIAN Implementation",
+    title: "TOGAF® Business Architecture",
     description:
-      "Our team have the expertise to take BIAN from a reference architecture to detailed design and development, unlocking it’s potential and delivering tangible benefits to your organization",
-    icon: "/cloud.svg",
+      "Earn your hands-on practical Business Architecture certificate with our expert training",
+    icon: "/courses/2.png",
+    link: "/togaf-business-architecture",
   },
   {
-    title: "Digital Transformation",
+    title: "IT4IT™",
     description:
-      "The rapidly growing gap between customer expectations and legacy capabilities has made our disciplined application of architecture across business, application and data crucial to success",
-    icon: "/integration.svg",
+      "More than half of all IT4IT certified practitioners were trained by CC&C or one of our traning academy affiliates. We are the gold standard in IT4IT ",
+    icon: "/courses/3.png",
+    link: "/it4it",
+  },
+  {
+    title: "ArchiMate®",
+    description:
+      "ArchiMate is the preferred modeling language for TOGAF. Along with TOGAF and the right tools, ArchiMate completes the foundation for effective architecture .",
+    icon: "/courses/4.png",
+    link: "/archimate",
+  },
+  {
+    title: "BIAN Foundation",
+    description:
+      "CC&C is the only authorised BIAN training provider with a global footprint. Get certified with one of CC&C’s experienced architects and benefit from our practical ",
+    icon: "/courses/5.png",
+    link: "/courses/bian-foundation",
+  },
+  {
+    title: "BIAN Data Architecture and Design",
+    description:
+      "Learn BIAN Business Object Modelling (BOM) in detail through practical use case",
+    icon: "/courses/6.png",
+    link: "/bian-data-architecture-and-design",
+  },
+  {
+    title: "BIAN for Integration®",
+    description:
+      "ArchiMate is the preferred modeling language for TOGAF. Along with TOGAF and the right tools, ArchiMate completes the foundation for effective architecture ",
+    icon: "/courses/4.png",
+    link: "/bian-for-integration",
+  },
+  {
+    title: "BIAN for Business Analyst",
+    description:
+      "CC&C is the only authorised BIAN training provider with a global footprint. Get certified with one of CC&C’s experienced architects and benefit from our practical ",
+    icon: "/courses/8.png",
+    link: "/bian-for-business-analyst",
+  },
+  {
+    title: "BIAN Business Architects",
+    description:
+      "Our newest offering for enterprise teams, led by CC&C’s master practitioners",
+    icon: "/courses/9.png",
+    link: "/bian-business-architects",
   },
 ];
-const cardData2 = [
-  {
-    title: "Business Architecture",
-    description:
-      "Maximising the return on your investment starts with a solid business architecture blueprint. Our certified Business Architects have helped bootstrap and operationalize world-class Business Architecture capabilities for leading organisations around the globe",
-    icon: "/build.svg",
-  },
-  {
-    title: "Enterprise Architecture",
-    description:
-      "As contributors and experts in industry architecture frameworks including TOGAF, IT4IT, BIAN and more we can help you establish and operate an effective enterprise architecture practice from strategy to tooling, frameworks, methodology, process, and governance",
-    icon: "/cloud.svg",
-  },
-  {
-    title: "Skills Transformation",
-    description:
-      "The single biggest differentiator you have is your people and their skills. We are a leading global training and certification provider in BIAN, TOGAF, IT4IT, ArchiMate, Bizz Design, and more, helping organisations boost their people capability to the forefront of their industry",
-    icon: "/integration.svg",
-  },
-];
-const cardData3 = [
-  {
-    title: "BIAN",
-    description:
-      "As an active BIAN member and the only BIAN-accredited training organisation with a global footprint, CC&C is uniquely positioned to help teams deliver early, measurable value while learning how to maximise BIAN usage effectively for the long term",
-    icon: "/build.svg",
-  },
-  {
-    title: "TOGAF",
-    description:
-      "Provide your teams the most up-to-date TOGAF certification, reflecting the many enhancements including agile architecture, digital transformation, capability-based planning, integrated risk and security, and much more",
-    icon: "/cloud.svg",
-  },
-  {
-    title: "IT4IT",
-    description:
-      "With more than half of all IT4IT practitioners trained and certified by CC&C, we equip your teams to manage DevOps and Digital Products at scale with our gold standard IT4IT foundation course.",
-    icon: "/integration.svg",
-  },
-];
+
 export default function Home() {
   const pathname = usePathname(); // Get current route
 
@@ -170,7 +176,7 @@ export default function Home() {
     };
   }, [prevScrollPos]);
   return (
-    <div className="bg-[url(/bg.png)] bg-cover bg-center h-screen font-sans">
+    <div className="bg-[url(/courses/hero.png)]  bg-no-repeat w-screen bg-cover  bg-center h-screen   font-sans">
       <div
         className={`flex justify-center items-center fixed  w-full z-[999999] transition-transform duration-300 ${
           isVisible ? " block" : "hidden"
@@ -192,6 +198,7 @@ export default function Home() {
               { href: "/course", label: "BIAN" },
               { href: "#", label: "Partners" },
               { href: "#", label: "Contact" },
+              { href: "#", label: "About" },
             ].map((item) => (
               <Link key={item.href} href={item.href}>
                 <div
@@ -212,27 +219,19 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <section
         data-aos="fade-up"
         className="flex flex-col items-center  pt-[320px]  justify-center text-center px-6 py-20"
       >
         <h1 className="text-4xl sm:text-[72px] font-extrabold text-gray-900 leading-[90px]">
-          Powering Digital Transformation <br />
-          Through{" "}
-          <span className="text-[#F68827]">World-Class Architecture</span>
-          {/* <span className="text-[#F68827]">
-            <Typewriter
-              words={[" "]}
-              loop={false}
-              cursor
-              typeSpeed={80}
-              deleteSpeed={50}
-            />
-          </span> */}
+          Industry-Leading IT Architecture <br />
+          Training & Certifications
         </h1>
-        <h4 className="mt-10 text-gray-600 max-w-[787px] text-[24px] ">
-          CC&C has been helping the largest companies get architecture right
-          for almost 20 years
+        <h4 className="mt-10 text-gray-600 max-w-[1165px] text-[24px] ">
+          Our approach is to make you feel empowered to put your learning into
+          practice. Your instructor will be an experienced practitioner who can
+          bring their hands-on, real-world experience to life
         </h4>
         <button className="mt-[48px] flex items-center gap-2 bg-[#0C71C3] text-white  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
           <span>
@@ -247,6 +246,280 @@ export default function Home() {
           TALK TO US
         </button>
       </section>
+      <section className="bg-[#FFFF] flex flex-col justify-center items-center pt-[100px] pb-[120px]">
+        <h1 className="mt-10 text-black font-extrabold text-[56px] text-center leading-[70px]">
+          Explore our Industry Leading courses
+        </h1>
+        <div className="grid grid-cols-3  justify-center gap-6 mt-10">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className=" w-[360px] h-[436px]  relative  rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 "
+            >
+              {/* Icon */}
+              <div className=" rounded-xl inline-flex justify-center items-center">
+                <Image src={card.icon} alt="Icon" width={360} height={200} />
+              </div>
+
+              {/* Title */}
+              <h3 className=" left-[24px] px-5 top-[128px] mt-6  text-[24px] font-extrabold  text-black group-hover:text-black transition-all duration-300">
+                {card.title}
+              </h3>
+
+              {/* Description */}
+              <div className=" left-[24px] top-[224px] mt-3  px-5  text-base  text-black group-hover:text-black transition-all duration-300">
+                {card.description}
+              </div>
+
+              {/* Learn More Button */}
+              <Link href={card.link}>
+                <button className="absolute bottom-0 -right-[8px] bg-[#FF7D33] text-white rounded-br-[20px] rounded-tl-[20px] px-5 py-2 text-base font-semibold flex items-center gap-2 transition-all duration-300">
+                  LEARN MORE
+                  <span>
+                    <Image
+                      src="/courses/arrow.svg"
+                      alt="Arrow"
+                      width={26}
+                      height={26}
+                    />
+                  </span>
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="flex flex-col items-center justify-center  mt-[202px]">
+        <div className="md:w-[1128px]">
+          <div className="flex items-center justify-between  w-full ">
+            <h1 className=" text-black font-extrabold text-[56px]">
+              Our Value Proportion
+            </h1>
+          </div>
+          <div className="grid grid-cols-2">
+            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+              <Image
+                src="/courses/instruct.png"
+                width={548}
+                height={290}
+                className="rounded-t-[8px]"
+                alt=""
+              />
+              <h1 className="text-[28px] font-semibold p-[24px]">
+                Experienced & Practicing Instructors
+              </h1>
+            </div>
+            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+              <Image
+                src="/courses/chart.png"
+                width={548}
+                height={290}
+                className="rounded-t-[8px]"
+                alt=""
+              />
+              <h1 className="text-[28px] font-semibold p-[24px]">
+                Satisfaction Guaranteed with High Success Rate
+              </h1>
+            </div>{" "}
+            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+              <Image
+                src="/courses/exam.png"
+                width={548}
+                height={290}
+                className="rounded-t-[8px]"
+                alt=""
+              />
+              <h1 className="text-[28px] font-semibold p-[24px]">
+                Post Training Support with Exam Booster Session
+              </h1>
+            </div>{" "}
+            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+              <Image
+                src="/courses/map.png"
+                width={548}
+                height={290}
+                className="rounded-t-[8px]"
+                alt=""
+              />
+              <h1 className="text-[28px] font-semibold p-[24px]">
+                Available World-wide
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col bg-[#0C71C3] pb-[120px] items-center mt-[120px] justify-center  ">
+        <div className="md:w-[1128px]  text-white">
+          <div className="flex flex-col items-start pt-[120px] w-full ">
+            <h1 className="  font-extrabold text-[56px]">Why CC&C Learning</h1>
+            <p className="text-[24px]">
+              CC&C Training Prepares You for the Actual Application of the
+              Training Material and Focuses on the Skills You Need to Be an
+              Effective and Respected Professional
+            </p>
+          </div>
+          <div className="flex justify-between items-center mt-[64px]">
+            <div className="w-[620px] flex flex-col gap-10">
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  Customised and fit for purpose course materials to support
+                  student learning journey
+                </p>
+              </div>
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  Our approach is to make you feel empowered to put your
+                  learning into practice
+                </p>
+              </div>{" "}
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  High success rate with high level of satisfaction
+                </p>
+              </div>{" "}
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  Post Training Support and Exam Booster Packs
+                </p>
+              </div>{" "}
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  Available World-wide to suit different time zones
+                </p>
+              </div>{" "}
+              <div className="flex items-center gap-5">
+                <Image
+                  className=""
+                  src="/courses/star.svg"
+                  alt="bian"
+                  width={25}
+                  height={25}
+                />
+                <p className="lg:w-[830px] font-medium text-[18px] text-[#EEEEEE]">
+                  Culturally sensitive approach facilitates best learning
+                  outcome
+                </p>
+              </div>
+            </div>
+            <Image
+              className=""
+              src="/courses/bian-foundation/learning.png"
+              alt="bian"
+              width={354}
+              height={423}
+            />
+          </div>
+          <div className="mt-20 flex flex-col gap-8 w-full">
+            <div className="flex items-center gap-5">
+              <Image
+                className=""
+                src="/courses/star.svg"
+                alt="bian"
+                width={25}
+                height={25}
+              />
+              <p className="text-[18px] text-[#EEEEEE] font-medium">
+                Core Competence in Enterprise Architecture, IT Architecture,
+                Banking Architecture & Digital Transformation
+              </p>
+            </div>{" "}
+            <div className="flex items-center gap-5">
+              <Image
+                className=""
+                src="/courses/star.svg"
+                alt="bian"
+                width={25}
+                height={25}
+              />
+              <p className="text-[18px] text-[#EEEEEE] font-medium">
+                Your instructor will be an experienced practitioner who can
+                bring their hands-on, real-world experience to life
+              </p>
+            </div>{" "}
+            <div className="flex items-center gap-5">
+              <Image
+                className=""
+                src="/courses/star.svg"
+                alt="bian"
+                width={25}
+                height={25}
+              />
+              <p className="text-[18px] text-[#EEEEEE] font-medium">
+                Dedicated teams to manage and deliver large (bulk) corporate
+                training initiatives – virtual, in-person and on demand
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="mt-10 text-[#262626] max-w-[1218px] mx-auto flex flex-col justify-center items-center">
+        <div className="flex justify-center items-center text-center mt-[120px]">
+          <h1 className=" text-black font-extrabold text-[56px] ">
+            CC&C Learning will be with you all the way through your learning
+            journey
+          </h1>
+        </div>
+        <div className="flex justify-center items-center mt-[64px]">
+          <div className="lg:w-[950px] w-full h-[264px] border-4 border-[#0D9EFF] border-t-[16px] rounded-b-3xl flex  justify-center items-center ">
+            <div className="flex flex-col justify-center items-center gap-2">
+              <ul className="  font-medium text-[24px] md:flex md:flex-row md:items-center md:justify-center flex flex-col justify-center items-center md:gap-12 gap-5 list-disc">
+                <li>Talk to our learning team</li>
+                <li>Aks for a quote</li>
+              </ul>
+              <ul className=" font-medium text-[24px] list-disc ">
+                <li>Check our next available training</li>
+              </ul>
+              <button className="mt-[32px] flex items-center gap-2 bg-[#0C71C3] text-white  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
+                <span>
+                  <Image
+                    className="ml-4 "
+                    src="/arrow.svg"
+                    alt="Company Logo"
+                    width={40}
+                    height={40}
+                  />
+                </span>{" "}
+                CONTACT US
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         data-aos="fade-up"
         className="flex justify-center items-center mt-[290px]"
@@ -254,7 +527,7 @@ export default function Home() {
         <div className="flex items-center gap-20">
           <div>
             <Image
-              src="/team.png"
+              src="/courses/people.png"
               className="rounded-3xl"
               alt="Company Logo"
               width={524}
@@ -263,16 +536,16 @@ export default function Home() {
           </div>
           <div className="w-[572px]">
             <h2 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
-              Architecture consulting & skills
+              Our People
             </h2>
             <p className="text-[20px] text-gray-600 mt-6 text-start tracking-tight">
               CC&C Solutions has been providing industry-leading architecture
               consulting, training, and digital transformation delivery services
-              for some of the most successful global organisations for over 20
+              for some of the most successful global organizations for over 20
               years. Bringing together the most talented leaders and experts in
               the fields of Financial Services, Insurance, Telecommunications,
               Retail and Health we have an unparalleled record for delighting
-              and making our customers successful
+              and making our customers successful.
             </p>
             <button className="mt-[32px] flex items-center gap-2 bg-[#0C71C3] text-white  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
               <span>
@@ -289,199 +562,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#0C71C3] flex flex-col justify-center items-center mt-[160px] pb-[120px]">
-        <h1 className="mt-40 text-white font-extrabold text-[56px] leading-[70px]">
-          Accelerating Your Banking Transformation
-        </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
-          The Financial Services industry is going througha radical
-          modernization, simplification, and interoperability renaissance across
-          the globe. But unlocking the potential for digital transformation
-          within your enterprise requires the right architecture experience,
-          disciplines, and capabilities
-        </p>
-        <div className="flex justify-center gap-6 mt-10">
-          {cardData.map((card, index) => (
-            <div
-              key={index}
-              className="group w-[360px] h-[559px] relative bg-[#0c71c3] rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-white"
-            >
-              {/* Icon */}
-              <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#0d9eff] group-hover:bg-[#0C71C3] rounded-xl inline-flex justify-center items-center">
-                <Image src={card.icon} alt="Icon" width={40} height={40} />
-              </div>
 
-              {/* Title */}
-              <h3 className="w-[203px] left-[24px] top-[128px] absolute text-[32px] font-extrabold leading-10 text-[#eeeeee] group-hover:text-black transition-all duration-300">
-                {card.title}
-              </h3>
-
-              {/* Description */}
-              <div className="w-[302px] left-[24px] top-[224px] absolute text-xl leading-[35px] text-[#e0e0e0] group-hover:text-black transition-all duration-300">
-                {card.description}
-              </div>
-
-              {/* Learn More Button */}
-              <button
-                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px]  px-5 py-2 bg-[#0d9eff] text-white  text-sm font-semibold flex items-center gap-2 transition-all duration-300
-              opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
-              >
-                LEARN MORE
-                <span>
-                  <Image src="/arrow.svg" alt="Arrow" width={16} height={16} />
-                </span>
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="bg-[#F5F5F5] flex flex-col justify-center items-center pt-[100px] pb-[120px]">
-        <h1 className="mt-10 text-black/80 font-extrabold text-[56px] text-center leading-[70px]">
-          Helping Organisations Excel in <br /> Architecture for Over 20 Years
-        </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-black/80  leading-[35px]">
-          As the pace of innovation, customer expectations and competition
-          continue to increase, the difference between leading and lagging lies
-          in the mastery of business and enterprisearchitecture. CC&C Solutions
-          stands at the forefront of this divide, offering over two decades of
-          specialized experience in the Financial Services, Insurance,
-          Telecommunications, Retail, and Health industries. Our commitment is
-          not just to consult but to transform your operational capabilities
-          through disciplined best practices.
-        </p>
-        <div className="flex justify-center gap-6 mt-10">
-          {cardData2.map((card, index) => (
-            <div
-              key={index}
-              className="group w-[360px] h-[599px] relative bg-white rounded-[20px] border border-white overflow-hidden transition-all duration-300 hover:bg-[#FF8800]"
-            >
-              {/* Icon */}
-              <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#FF8800] group-hover:bg-[#e9a251] rounded-xl inline-flex justify-center items-center">
-                <Image src={card.icon} alt="Icon" width={40} height={40} />
-              </div>
-
-              {/* Title */}
-              <h3 className="w-[203px] left-[24px] top-[120px] absolute text-[32px] font-extrabold leading-10 text-black/80 group-hover:text-white transition-all duration-300">
-                {card.title}
-              </h3>
-
-              {/* Description */}
-              <div className="w-[302px] left-[24px] top-[214px] absolute text-xl leading-8 text-black/80 group-hover:text-white transition-all duration-300">
-                {card.description}
-              </div>
-
-              {/* Learn More Button */}
-              <button
-                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px] px-5 py-2 bg-white text-black  text-sm font-semibold flex items-center gap-2 transition-all duration-300
-              opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
-              >
-                LEARN MORE
-                <span>
-                  <Image src="/arrow.svg" alt="Arrow" width={16} height={16} />
-                </span>
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section
-        data-aos="fade-up"
-        className="flex justify-center items-center  mt-[120px]"
-      >
-        <div className="flex items-center gap-20">
-          <div className="">
-            <iframe
-              width="560"
-              height="615"
-              src="https://www.youtube.com/embed/yHucWNu6CXM?si=DgxPTPgp83VW3144"
-              className="rounded-3xl -mt-16 "
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <div className="w-[672px] flex flex-col items-center">
-            <h1 className="text-4xl sm:text-[56px] font-extrabold text-gray-900 leading-[70px]">
-              Transform Banking with CC&C Solutions!
-            </h1>
-            <p className="text-[20px] text-gray-600 mt-6 text-justify tracking-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, qui provident adipisci magnam iste tempore cupiditate
-              quas sequi. Accusamus non est eaque, dolores quia doloribus illum
-              reiciendis eligendi natus esse! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Repellendus, qui provident adipisci
-              magnam iste tempore cupiditate quas sequi. Accusamus non est
-              eaque, dolores quia doloribus illum reiciendis eligendi natus
-              esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <div className="relative w-[350px]">
-              <div className=" border-2 p-2 relative border-[#ffc40e] inline-flex justify-center items-center mt-40 overflow-hidden">
-                <div className="h-20  bg-[#ffc40e] px-8 inline-flex justify-center items-center gap-2.5">
-                  <div className="relative justify-start text-neutral-800 text-[32px] font-extrabold leading-10">
-                    over 20+ years
-                  </div>
-                </div>
-              </div>
-              <Image
-                src="/kama.svg"
-                className="absolute top-10 -right-16 -z-10"
-                alt="Company Logo"
-                width={180}
-                height={180}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-[#0C71C3] flex flex-col justify-center items-center py-[160px] mt-[120px]">
-        <h1 className=" text-white font-extrabold text-[56px] leading-[70px] text-center">
-          Industry-Leading Architecture Training <br /> and Certification
-        </h1>
-        <p className="text-[20px] mt-6 lg:w-[1066px] text-center text-[#EEEEEE]  leading-[35px]">
-          Getting Architecture right provides one of the highest returns on
-          investment for your business. And equipping your teams with the right
-          skills and qualifications is our business. We have been training and
-          certifying hundreds of organisations and hundreds of thousands of
-          individuals world-wide for over 20 yearsin industry-leading
-          frameworks, standards andtools.
-        </p>
-        <div className="flex justify-center gap-6 mt-10">
-          {cardData3.map((card, index) => (
-            <div
-              key={index}
-              className="group w-[360px] h-[559px] relative bg-[#0c71c3] rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 hover:bg-white"
-            >
-              {/* Icon */}
-              <div className="w-[67.2px] h-16 left-[24px] top-[24px] absolute bg-[#0d9eff] group-hover:bg-[#0C71C3] rounded-xl inline-flex justify-center items-center">
-                <Image src={card.icon} alt="Icon" width={40} height={40} />
-              </div>
-
-              {/* Title */}
-              <div className="w-[203px] left-[24px] top-[128px] absolute text-[32px] font-extrabold leading-10 text-[#eeeeee] group-hover:text-black transition-all duration-300">
-                {card.title}
-              </div>
-
-              {/* Description */}
-              <div className="w-[302px] left-[24px] top-[184px] absolute text-xl leading-8 text-[#e0e0e0] group-hover:text-black transition-all duration-300">
-                {card.description}
-              </div>
-
-              {/* Learn More Button */}
-              <button
-                className="absolute bottom-0 -right-[8px]  rounded-br-[20px] rounded-tl-[20px]  px-5 py-2 bg-[#0d9eff] text-white  text-sm font-semibold flex items-center gap-2 transition-all duration-300
-              opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0"
-              >
-                LEARN MORE
-                <span>
-                  <Image src="/arrow.svg" alt="Arrow" width={16} height={16} />
-                </span>
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="flex flex-col items-center justify-center mt-[202px]">
+      <section className="flex flex-col items-center justify-center  mt-[202px]">
         <div className="md:w-[1128px]">
           <div className="flex items-center justify-between  w-full ">
             <h1 className=" text-black font-extrabold text-[56px]">
@@ -562,7 +644,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center mt-[202px]">
+      <section className="flex flex-col items-center justify-center mt-[202px] pb-20">
         <div className="md:w-[1128px]">
           <div className="flex flex-col    w-full ">
             <h1 className=" text-black font-extrabold text-[56px]">
@@ -663,75 +745,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-[202px]">
-        <div className="bg-[url(/num.png)] bg-contain py-80  bg-center">
-          <div>
-            <h1 className=" text-white text-center font-extrabold text-[56px]">
-              Our Numbers Speak
-            </h1>
-          </div>
-          <main data-aos="fade-up">
-            <StatsCounter />
-          </main>
-        </div>
-      </section>
-      <section className=" flex justify-center items-center flex-col bg-[#FAFAFA]">
-        <div className="md:w-[1128px] mt-40">
-          <div className="flex flex-col gap-5">
-            <p className="font-bold text-[56px]">Our Team: Our People</p>
-            <p className="text-[20px] leading-[35px] text-[#393939]">
-              CC&C harnesses the collective power of global expertise in
-              architecture, data, digital transformation, and modern delivery
-              paradigms to redefine the landscape of IT consulting. Our team,
-              composed of consultant experts from around the world, brings deep,
-              cross-domain experience to the forefront of every engagement
-            </p>
-            <p className="text-[20px] leading-[35px] text-[#393939]">
-              Our team have a 20+ year track record of delivering tailored,
-              impactful solutions that drive real, measurable outcomes.
-            </p>
-            <p className="text-[20px] leading-[35px] text-[#393939]">
-              Whether its through strategic consultancy, the implementation of
-              advanced IT strategies, or guiding digital transformation efforts,
-              our focus remains unwavering: to empower our clients with the
-              tools and knowledge necessary for enduring success in a
-              digital-first world.
-            </p>
-          </div>
-        </div>
-        <div data-aos="fade-zoom" className="md:w-[1128px] pt-20 pb-40">
-          <div className=" relative flex justify-start items-center">
-            <Image
-              src="/last.png"
-              alt="background"
-              className="w-[700px] relative"
-              layout="responsive"
-              width={700}
-              height={60}
-            />
-            <div className="absolute top-[58px]  px-[50px]">
-              <p className="text-[24px] text-white">
-                Helping Organisations Excel in Architecture over 20 years
-              </p>
-              <p className="text-[36px] text-white font-bold">
-                Learn more about our services
-              </p>
-              <button className="mt-[24px] flex items-center gap-2 bg-white text-[#0C71C3]  w-[202px] py-3 rounded-full text-lg font-semibold shadow-lg  transition">
-                <span>
-                  <Image
-                    className="ml-4 "
-                    src="/arrow2.svg"
-                    alt="Company Logo"
-                    width={40}
-                    height={40}
-                  />
-                </span>{" "}
-                TALK TO US
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <footer className="bg-[#0D2F4B]">
         <div>
           <div className="flex justify-center items-center gap-20 pt-[50px] pb-8">
