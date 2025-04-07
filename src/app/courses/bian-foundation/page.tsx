@@ -178,13 +178,13 @@ const Page: React.FC = () => {
           VIEW BIAN CALENDAR
         </button>
       </section>
-      <section className="mb-10 flex flex-col justify-center items-center gap-10 mt-[260px] lg:w-[1080px] mx-auto">
+      <section className="mb-10 flex flex-col justify-center items-center gap-10 mt-[260px] lg:w-[1190px] mx-auto">
         <div className="flex flex-row justify-center items-center  gap-10">
           <h1 className="text-[#262626] font-bold md:text-[50px] text-[30px] text-center md:text-start be-vietnam-bold ">
             Earn the new BIAN certification this year
           </h1>
         </div>
-        <div className="flex justify-between items-center w-full    ">
+        <div className="flex justify-between items-center mt-[67px] w-full    ">
           <div>
             <Image
               className=""
@@ -203,7 +203,7 @@ const Page: React.FC = () => {
                 width={20}
                 height={20}
               />
-              <p className="be-vietnam-medium text-[18px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 Attain in-depth knowledge and understanding of BIAN
               </p>
             </div>
@@ -215,7 +215,7 @@ const Page: React.FC = () => {
                 width={20}
                 height={20}
               />
-              <p className="be-vietnam-medium text-[18px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 Learn how to architect a bank using BIAN standard
               </p>
             </div>
@@ -227,15 +227,15 @@ const Page: React.FC = () => {
                 width={20}
                 height={20}
               />
-              <p className="be-vietnam-medium text-[18px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 Obtain BIAN Foundation Certification through BIAN certification
                 exam
               </p>
             </div>
           </div>
         </div>
-        <div className="lg:flex lg:flex-row mt-[88px] lg:justify-center lg:items-center flex flex-col justify-center items-center gap-10">
-          <div className="flex flex-col gap-6 -mt-10 lg:max-w-[650px]">
+        <div className="lg:flex lg:flex-row mt-[88px] lg:justify-center  w-full lg:items-center flex flex-col justify-center items-center gap-10">
+          <div className="flex flex-col gap-3  justify-start items-start lg:max-w-[950px]">
             <div className="flex items-center gap-4 ">
               <Image
                 className="w-[20px] h-[20px] "
@@ -339,7 +339,7 @@ const Page: React.FC = () => {
             and microservices for a full range of banking activities.
           </p>
         </div>
-        <div className="max-w-5xl mx-auto mt-[64px]">
+        <div className="max-w-[1180px] mx-auto mt-[64px]">
           <div className="space-y-6 p-2 ">
             {faq.map((item, index) => (
               <div
@@ -349,9 +349,6 @@ const Page: React.FC = () => {
                     ? "border-4 border-[#0C71C3]"
                     : "border border-[#EEEEEE]  "
                 } bg-[#EEEEEE]  `}
-                data-aos="fade-in"
-                data-aos-delay="50"
-                data-aos-duration="1000"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
