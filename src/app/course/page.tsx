@@ -254,10 +254,10 @@ export default function Home() {
           {cardData.map((card, index) => (
             <div
               key={index}
-              className=" w-[360px] h-[436px]  relative  rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 "
+              className=" w-[360px] h-[476px]  relative  rounded-[20px] border border-[#eeeeee] overflow-hidden transition-all duration-300 "
             >
               {/* Icon */}
-              <div className=" rounded-xl inline-flex justify-center items-center">
+              <div className=" rounded-xl inline-flex h-[200px] justify-center items-center">
                 <Image src={card.icon} alt="Icon" width={360} height={200} />
               </div>
 
