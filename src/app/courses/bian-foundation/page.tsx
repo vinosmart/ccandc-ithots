@@ -235,40 +235,40 @@ const Page: React.FC = () => {
           </div>
         </div>
         <div className="lg:flex lg:flex-row mt-[88px] lg:justify-center lg:items-center flex flex-col justify-center items-center gap-10">
-          <div className="flex flex-col gap-10 lg:max-w-[550px]">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-6 -mt-10 lg:max-w-[650px]">
+            <div className="flex items-center gap-4 ">
               <Image
-                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
+                className="w-[20px] h-[20px] "
                 src="/courses/bian-foundation/bianstar.svg"
                 alt="bian"
                 width={30}
                 height={30}
               />
-              <p className="be-vietnam-medium text-[20px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 CC&C has trained thousands of Architects world-wide
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Image
-                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
+                className="w-[20px] h-[20px] "
                 src="/courses/bian-foundation/bianstar.svg"
                 alt="bian"
                 width={30}
                 height={30}
               />
-              <p className="be-vietnam-medium text-[20px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 We are an experienced partner for major banks world-wide
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Image
-                className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
+                className="w-[20px] h-[20px] "
                 src="/courses/bian-foundation/bianstar.svg"
                 alt="bian"
                 width={30}
                 height={30}
               />
-              <p className="be-vietnam-medium text-[20px] text-[#393939]">
+              <p className="be-vietnam-medium text-[24px] text-[#393939]">
                 Your trainer is an actual architect with hands-on experience!
               </p>
             </div>
