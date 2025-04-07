@@ -297,7 +297,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="grid grid-cols-2">
-            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+            <div className="shadow w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
               <Image
                 src="/courses/instruct.png"
                 width={548}
@@ -309,7 +309,7 @@ export default function Home() {
                 Experienced & Practicing Instructors
               </h1>
             </div>
-            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+            <div className="shadow w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
               <Image
                 src="/courses/chart.png"
                 width={548}
@@ -321,7 +321,7 @@ export default function Home() {
                 Satisfaction Guaranteed with High Success Rate
               </h1>
             </div>{" "}
-            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+            <div className="shadow w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
               <Image
                 src="/courses/exam.png"
                 width={548}
@@ -333,7 +333,7 @@ export default function Home() {
                 Post Training Support with Exam Booster Session
               </h1>
             </div>{" "}
-            <div className="border-2 border-[#0C71C3] w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
+            <div className="shadow w-[548px]  rounded-[8px] mt-[60px] flex flex-col items-center justify-center">
               <Image
                 src="/courses/map.png"
                 width={548}

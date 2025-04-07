@@ -194,7 +194,7 @@ const Page: React.FC = () => {
               height={188}
             />
           </div>
-          <div className="flex  flex-col gap-10">
+          <div className="flex  flex-col gap-4">
             <div className="flex items-center gap-4">
               <Image
                 className=""
@@ -273,7 +273,7 @@ const Page: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="lg:w-[450px] lg:h-[340px] bg-[#ECF6FE]  border-[3px] border-[#0C71C3] p-10 rounded-lg  flex flex-col  gap-5">
+          <div className="lg:w-[380px] lg:h-[340px] bg-[#ECF6FE]  border-[3px] border-[#0C71C3] p-10 rounded-lg  flex flex-col  gap-5">
             <h1 className="be-vietnam-pro-semibold text-[20px] text-[#393939]">
               Quick facts
             </h1>
@@ -312,16 +312,16 @@ const Page: React.FC = () => {
           </div>
         </div>
         <div className="md:flex md:flex-row mt-[60px] md:justify-between w-full md:items-center flex flex-col justify-center items-center gap-5">
-          <button className="px-5 py-2 bg-[#FF7D33] text-white be-vietnam-medium">
+          <button className="px-5 py-2 bg-[#FF7D33] hover:bg-[#0C71C3] text-white be-vietnam-medium">
             VIEW BIAN CALENDAR
           </button>
-          <button className="px-5 py-2 bg-[#FF7D33] text-white be-vietnam-medium">
+          <button className="px-5 py-2 bg-[#FF7D33] hover:bg-[#0C71C3] text-white be-vietnam-medium">
             DOWNLOAD BROUCHRE
           </button>
-          <button className="px-5 py-2 bg-[#0C71C3] text-white be-vietnam-medium">
+          <button className="px-5 py-2 bg-[#FF7D33] hover:bg-[#0C71C3] text-white be-vietnam-medium">
             OTHER COURSES
           </button>
-          <button className="px-5 py-2 bg-[#FF7D33] text-white be-vietnam-medium">
+          <button className="px-5 py-2 bg-[#FF7D33] hover:bg-[#0C71C3] text-white be-vietnam-medium">
             ENQUIRE
           </button>
         </div>
@@ -411,10 +411,10 @@ const Page: React.FC = () => {
                       : { height: 0, opacity: 0 }
                   }
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden flex flex-col gap-5"
+                  className="overflow-hidden flex flex-col gap-5 "
                 >
-                  <p className="text-[#525252] text-lg ">{item.answer}</p>
-                  <ul className="flex flex-col gap-3 text-[#525252] text-[18px]  p-3 list-disc">
+                  <p className="text-[#525252] text-lg  mt-4">{item.answer}</p>
+                  <ul className="flex flex-col gap-3 text-[#525252] text-[18px]  -ml-2 p-3 list-disc">
                     <li>{item.list1}</li>
                     <li>{item.list2}</li>
                   </ul>
@@ -424,7 +424,7 @@ const Page: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center items-center mt-10">
-          <button className="flex items-center gap-3 bg-[#0C71C3] hover:bg-blue-700 px-2 py-2 text-white rounded-full  text-[20px]">
+          <button className="flex items-center gap-3 bg-[#0C71C3] hover:bg-blue-700 px-2 w-[200px] py-2 text-white rounded-full  text-[20px]">
             <Image
               className=""
               src="/courses/bian-foundation/button.svg"
